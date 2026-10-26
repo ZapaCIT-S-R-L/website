@@ -9,7 +9,10 @@ const BASE = (process.env.BASE_URL ?? "http://127.0.0.1:8787").replace(/\/$/, ""
 const LIVE = process.env.LIVE === "1";
 const get = (path, base = BASE) => fetch(base + path, { redirect: "manual" });
 // Locally the Location header points at the dev server, live at www: compare path and query only.
-const target = (res) => { const u = new URL(res.headers.get("location")); return u.pathname + u.search; };
+const target = (res) => {
+  const u = new URL(res.headers.get("location"));
+  return u.pathname + u.search;
+};
 
 const pages = ["/", "/contact", "/privacy", "/en/", "/en/contact", "/en/privacy", "/de/", "/de/contact", "/de/privacy"];
 for (const path of pages) {
@@ -35,9 +38,20 @@ test("unknown page returns the 404 page", async () => {
 
 // Public repo, public site: source, config and tooling must never be served as assets.
 const privateFiles = [
-  "/build.py", "/package.json", "/package-lock.json", "/wrangler.jsonc", "/src/index.js", "/README.md",
-  "/LICENSE", "/SECURITY.md", "/CONTRIBUTING.md", "/.assetsignore", "/.gitignore",
-  "/.github/workflows/deploy.yml", "/test/worker.test.js", "/test/e2e/site.test.js",
+  "/build.py",
+  "/package.json",
+  "/package-lock.json",
+  "/wrangler.jsonc",
+  "/src/index.js",
+  "/README.md",
+  "/LICENSE",
+  "/SECURITY.md",
+  "/CONTRIBUTING.md",
+  "/.assetsignore",
+  "/.gitignore",
+  "/.github/workflows/deploy.yml",
+  "/test/worker.test.js",
+  "/test/e2e/site.test.js",
 ];
 for (const path of privateFiles) {
   test(`repo file ${path} is not served`, async () => {
@@ -45,7 +59,13 @@ for (const path of privateFiles) {
   });
 }
 
-for (const [from, to] of [["/pricing", "/"], ["/de/terms.html", "/de/"], ["/en/cookies", "/en/"], ["/app/kid", "/"], ["/api/v1/x", "/"]]) {
+for (const [from, to] of [
+  ["/pricing", "/"],
+  ["/de/terms.html", "/de/"],
+  ["/en/cookies", "/en/"],
+  ["/app/kid", "/"],
+  ["/api/v1/x", "/"],
+]) {
   test(`old URL ${from} redirects to ${to}`, async () => {
     const res = await get(from);
     assert.equal(res.status, 301);
