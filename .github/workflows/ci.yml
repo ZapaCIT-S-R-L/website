@@ -2,9 +2,9 @@
 #   unit     Worker redirect tests (npm test)
 #   pages    translation parity (test/test_build.py) and the committed .html match build.py
 #   build    wrangler bundles the Worker and its assets (dry run, nothing uploaded)
-#   e2e      the full site over HTTP on a local wrangler dev server (npm run test:e2e)
+#   e2e      the full site over HTTP on a local wrangler dev server: pages, headers, links (npm run test:e2e)
 #   secrets  gitleaks scan of the whole history
-#   lint     Prettier (spaces, formatting), ESLint (JS), Ruff (build.py), actionlint (these workflows)
+#   lint     html-validate (pages), Prettier (spaces, formatting), ESLint (JS), Ruff (Python), actionlint (workflows)
 name: ci
 
 on:
@@ -87,6 +87,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: npm ci
+      - run: npx html-validate "*.html" "de/*.html" "en/*.html"
       - run: npx prettier --check .
       - run: npx eslint .
       - run: pip install ruff==0.17.2 && ruff check build.py test && ruff format --check build.py test
