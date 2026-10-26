@@ -1,6 +1,6 @@
 # Checks every pull request and every push to main. No secrets are used here, so PRs from forks are safe.
 #   unit     Worker redirect tests (npm test)
-#   pages    the committed .html match build.py
+#   pages    translation parity (test/test_build.py) and the committed .html match build.py
 #   build    wrangler bundles the Worker and its assets (dry run, nothing uploaded)
 #   e2e      the full site over HTTP on a local wrangler dev server (npm run test:e2e)
 #   secrets  gitleaks scan of the whole history
@@ -32,6 +32,7 @@ jobs:
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: "3.12"
+      - run: python3 -m unittest discover -s test -p "test_*.py" -v
       - run: python3 build.py && git diff --exit-code
 
   build:
@@ -88,5 +89,5 @@ jobs:
       - run: npm ci
       - run: npx prettier --check .
       - run: npx eslint .
-      - run: pip install ruff==0.17.2 && ruff check build.py && ruff format --check build.py
+      - run: pip install ruff==0.17.2 && ruff check build.py test && ruff format --check build.py test
       - run: docker run --rm -v "$PWD:/repo" -w /repo rhysd/actionlint:1.7.12 -color
