@@ -9,6 +9,7 @@ Thanks for helping. Issues and pull requests are welcome.
 
 ## Contributor License Agreement
 
-This project is licensed under the [AGPL-3.0](LICENSE). Before we can merge your first pull request,
-you sign the ZapaCIT SRL Contributor License Agreement (a bot asks you on the PR). You keep the copyright
-in your contribution, and ZapaCIT SRL can distribute it, including through the app stores.
+This project is licensed under the [AGPL-3.0](LICENSE). Before we can merge your first pull request, you sign the
+[ZapaKid Contributor License Agreement](CLA.md): add a row with your GitHub username to
+[CLA-SIGNATURES.md](CLA-SIGNATURES.md) in that pull request. The `cla` check confirms it. You keep the copyright in
+your contribution, and ZapaCIT SRL can distribute it, including through the app stores.

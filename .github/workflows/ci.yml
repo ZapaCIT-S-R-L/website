@@ -5,6 +5,7 @@
 #   e2e      the full site over HTTP on a local wrangler dev server: pages, headers, links (npm run test:e2e)
 #            and accessibility with axe-core in headless Chromium (npm run test:a11y)
 #   secrets  gitleaks scan of the whole history
+#   cla      the PR author signed the CLA (CLA-SIGNATURES.md), or is ZapaCIT staff or a bot
 #   lint     html-validate (pages), Prettier (spaces, formatting), ESLint (JS), Ruff (Python), actionlint (workflows)
 name: ci
 
@@ -102,3 +103,21 @@ jobs:
       - run: npx eslint .
       - run: pip install ruff==0.17.2 && ruff check build.py test && ruff format --check build.py test
       - run: docker run --rm -v "$PWD:/repo" -w /repo rhysd/actionlint:1.7.12 -color
+
+  cla:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+      # Staff come from CODEOWNERS on the base branch, not from the pull request.
+      - run: git fetch --depth=1 origin "$BASE_REF" && git show "FETCH_HEAD:.github/CODEOWNERS" > "$RUNNER_TEMP/CODEOWNERS"
+        env:
+          BASE_REF: ${{ github.event.pull_request.base.ref }}
+      - run: node scripts/cla-check.js
+        env:
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          PR_ASSOCIATION: ${{ github.event.pull_request.author_association }}
+          CODEOWNERS_FILE: ${{ runner.temp }}/CODEOWNERS
