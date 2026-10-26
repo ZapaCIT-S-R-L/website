@@ -54,17 +54,17 @@ jobs:
       - run: npm ci
       - name: Start the site locally
         run: |
-          nohup npx wrangler dev --port 8787 --local-upstream www.zapakid.ro < /dev/null > wrangler.log 2>&1 &
+          nohup npx wrangler dev --port 8787 --local-upstream www.zapakid.ro --show-interactive-dev-session=false < /dev/null > "$RUNNER_TEMP/wrangler.log" 2>&1 &
           for i in $(seq 1 60); do
             curl -sf --max-time 2 -o /dev/null http://127.0.0.1:8787/ && { echo "up after ${i}s"; exit 0; }
             sleep 1
           done
-          cat wrangler.log; exit 1
+          cat "$RUNNER_TEMP/wrangler.log"; exit 1
       - run: npm run test:e2e
         env:
           BASE_URL: http://127.0.0.1:8787
       - if: failure()
-        run: cat wrangler.log
+        run: cat "$RUNNER_TEMP/wrangler.log"
 
   secrets:
     runs-on: ubuntu-latest
