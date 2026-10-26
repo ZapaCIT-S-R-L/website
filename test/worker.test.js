@@ -81,3 +81,26 @@ test("non-HTML responses are passed through untouched", async () => {
   const res = await worker.fetch(new Request("https://www.zapakid.ro/site.css"), env);
   assert.equal(await res.text(), css);
 });
+
+// Sign in with Apple on Android returns to https://zapakid.ro/app/apple#code=…&state=… (an App Link, api PR #8).
+// That one apex URL serves a page instead of redirecting; the fragment never reaches the server.
+test("https://zapakid.ro/app/apple serves the return page, not a redirect", async () => {
+  const res = await get("https://zapakid.ro/app/apple");
+  assert.equal(res.status, 200);
+  assert.equal(await res.text(), "/app/apple");
+  assert.equal(res.headers.get("x-robots-tag"), "noindex");
+  assert.equal(res.headers.get("cache-control"), "no-store");
+  assert.ok(res.headers.get("content-security-policy"), "security headers still apply");
+});
+
+for (const url of ["https://zapakid.ro/app/apple/x", "https://zapakid.ro/app/other", "https://zapakid.ro/app/Apple"]) {
+  test(`${url} still redirects to www`, async () => {
+    assert.equal((await get(url)).status, 301);
+  });
+}
+
+test("https://www.zapakid.ro/app/apple still redirects like the rest of /app", async () => {
+  const res = await get("https://www.zapakid.ro/app/apple");
+  assert.equal(res.status, 301);
+  assert.equal(res.headers.get("location"), "https://www.zapakid.ro/");
+});

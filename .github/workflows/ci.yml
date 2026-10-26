@@ -98,7 +98,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: npm ci
-      - run: npx html-validate "*.html" "de/*.html" "en/*.html"
+      - run: npx html-validate "*.html" "de/*.html" "en/*.html" "app/*.html"
       - run: npx prettier --check .
       - run: npx eslint .
       - run: pip install ruff==0.17.2 && ruff check build.py test && ruff format --check build.py test

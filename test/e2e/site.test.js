@@ -120,3 +120,10 @@ for (const [path, home] of [
 test("no page mentions the old contact@ address", async () => {
   for (const path of pages) assert.doesNotMatch(await (await get(path)).text(), /contact@zapakid\.ro/, path);
 });
+
+test("the Apple return page on the apex answers 200, noindex", { skip: !LIVE && "live only (apex host)" }, async () => {
+  const res = await get("/app/apple", "https://zapakid.ro");
+  assert.equal(res.status, 200);
+  assert.equal(res.headers.get("x-robots-tag"), "noindex");
+  assert.match(await res.text(), /ZapaKid/);
+});

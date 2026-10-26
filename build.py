@@ -478,10 +478,35 @@ def not_found():
     return page("ro", "404", "404 — ZapaKid", T["ro"]["desc"], body)
 
 
+def apple_return():
+    """https://zapakid.ro/app/apple: where Sign in with Apple on Android hands back to the app. No scripts."""
+    return """<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ZapaKid</title>
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<div class="wrap">
+<main class="page">
+<h1>ZapaKid</h1>
+<p>Deschide aplicația ZapaKid ca să termini conectarea. · Öffne die ZapaKid-App, um die Anmeldung abzuschließen. · Open the ZapaKid app to finish signing in.</p>
+</main>
+</div>
+</body>
+</html>
+"""
+
+
 for lang, base in LANGS.items():
     out = ROOT / base.strip("/")
     out.mkdir(exist_ok=True)
     for name, fn in (("index", landing), ("contact", contact), ("privacy", privacy)):
         (out / f"{name}.html").write_text(fn(lang))
 (ROOT / "404.html").write_text(not_found())
+(ROOT / "app").mkdir(exist_ok=True)
+(ROOT / "app" / "apple.html").write_text(apple_return())
 print("built", ", ".join(f"{b}{{index,contact,privacy}}.html" for b in LANGS.values()), "+ /404.html")
