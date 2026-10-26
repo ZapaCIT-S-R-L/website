@@ -20,7 +20,18 @@ No PHP, cookies, forms or third-party requests.
 2. A maintainer reviews and merges it.
 3. The merge to `main` deploys to Cloudflare (`.github/workflows/deploy.yml`, environment `production`), runs the
    end-to-end tests against www.zapakid.ro and rolls back to the previous version if they fail.
-   Never deploy from a laptop.
+
+## Versions
+
+Every deploy tags the merged commit `vMAJOR.MINOR.PATCH` before it goes live (`scripts/next-version.js`), and the
+Cloudflare version gets the same tag:
+
+- no label: patch (`v1.0.4` → `v1.0.5`)
+- label `minor`: a large feature (`v1.0.4` → `v1.1.0`)
+- label `major`: a change that breaks compatibility with the previous version (`v1.3.7` → `v2.0.0`)
+
+Add the label to the PR before merging it.
+Never deploy from a laptop.
 
 ## License
 

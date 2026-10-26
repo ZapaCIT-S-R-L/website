@@ -6,5 +6,5 @@ export default [
   { ignores: ["node_modules/", "dist/"] },
   js.configs.recommended,
   { files: ["src/**/*.js"], languageOptions: { globals: globals.serviceworker } },
-  { files: ["test/**/*.js", "eslint.config.js"], languageOptions: { globals: globals.node } },
+  { files: ["test/**/*.js", "scripts/**/*.js", "eslint.config.js"], languageOptions: { globals: globals.node } },
 ];
