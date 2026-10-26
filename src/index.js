@@ -17,8 +17,14 @@ const SECURITY_HEADERS = {
     "accelerometer=(), browsing-topics=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()",
 };
 
+// Sign in with Apple on Android returns here (api PR #8); the app's App Link normally opens it before the page loads.
+const APPLE_RETURN = "/app/apple";
+
 function route(request, env) {
   const url = new URL(request.url);
+  if (url.hostname === "zapakid.ro" && url.pathname === APPLE_RETURN) {
+    return appleReturn(request, env);
+  }
   if (url.hostname !== "www.zapakid.ro") {
     return Response.redirect(SITE + url.pathname + url.search, 301);
   }
@@ -30,6 +36,15 @@ function route(request, env) {
     return Response.redirect(SITE + "/" + (old[1] ?? ""), 301);
   }
   return env.ASSETS.fetch(request);
+}
+
+// Serves app/apple.html, never cached or indexed (the URL fragment carries a one-time sign-in code).
+async function appleReturn(request, env) {
+  const res = await env.ASSETS.fetch(new Request(SITE + APPLE_RETURN, request));
+  const out = new Response(res.body, res);
+  out.headers.set("X-Robots-Tag", "noindex");
+  out.headers.set("Cache-Control", "no-store");
+  return out;
 }
 
 // Fills the footer placeholders in HTML pages; everything else passes through as is.
