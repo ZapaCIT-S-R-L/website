@@ -27,6 +27,22 @@ for (const [from, to, why] of redirects) {
   });
 }
 
+// The exact values are checked end to end in test/e2e/headers.test.js; here: every kind of response has them.
+const securityHeaders = [
+  "content-security-policy",
+  "x-frame-options",
+  "x-content-type-options",
+  "referrer-policy",
+  "cross-origin-opener-policy",
+  "permissions-policy",
+];
+for (const url of ["https://www.zapakid.ro/", "https://zapakid.ro/en/", "https://www.zapakid.ro/pricing"]) {
+  test(`security headers on ${url}`, async () => {
+    const res = await get(url);
+    for (const name of securityHeaders) assert.ok(res.headers.get(name), name);
+  });
+}
+
 for (const path of ["/", "/en/", "/de/contact", "/privacy", "/application", "/apiary"]) {
   test(`www${path} is served from the static assets`, async () => {
     const res = await get(`https://www.zapakid.ro${path}`);
