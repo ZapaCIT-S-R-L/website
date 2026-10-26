@@ -1,0 +1,9 @@
+api/.env
+.DS_Store
+content/backup/
+content/out/
+__pycache__/
+.env
+*.env
+node_modules/
+.wrangler/

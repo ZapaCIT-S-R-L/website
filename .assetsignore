@@ -1,0 +1,14 @@
+.git
+.gitea
+.gitignore
+.assetsignore
+.wrangler
+node_modules
+package.json
+package-lock.json
+wrangler.jsonc
+src
+build.py
+README.md
+content
+api
