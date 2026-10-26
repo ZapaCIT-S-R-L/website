@@ -7,8 +7,17 @@ No PHP, cookies, forms or third-party requests.
 - At launch set `APP_STORE` / `GOOGLE_PLAY` in `build.py`: the "Soon" buttons become store links.
 - Hosted on Cloudflare: Worker `zapakid-site` (`wrangler.jsonc`, `src/index.js`) serves the pages and redirects
   zapakid.ro / app.zapakid.ro to www and the archived portal URLs to the landing pages.
-  **Deploys run in Gitea** (`.gitea/workflows/deploy.yml`) on every push to `main`; never from a laptop.
-  Actions settings: secret `CLOUDFLARE_API_TOKEN`, variable `CLOUDFLARE_ACCOUNT_ID`. DNS/zone: `ZapaKid.ro/infra`.
-- Until the nameservers move to Cloudflare, www.zapakid.ro is still the K3s copy (`zapakid-app`).
-- The previous full site (kid/parent portal, grading, Știați că, admin, question generators) is parked on
-  branch `archive/site-2026-10` / tag `archive-site-2026-10-19`.
+- Tests: `npm test` (the Worker's redirects, `test/worker.test.js`).
+
+## How changes ship
+
+1. Open a pull request. CI (`.github/workflows/ci.yml`) runs the tests, checks the pages match `build.py`
+   and scans the whole history for credentials.
+2. A maintainer reviews and merges it.
+3. The merge to `main` deploys to Cloudflare (`.github/workflows/deploy.yml`, environment `production`).
+   Never deploy from a laptop.
+
+## License
+
+[AGPL-3.0](LICENSE). Contributions need the CLA, see [CONTRIBUTING.md](CONTRIBUTING.md).
+Security issues: see [SECURITY.md](SECURITY.md).
