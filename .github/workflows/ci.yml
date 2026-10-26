@@ -1,0 +1,75 @@
+# Checks every pull request and every push to main. No secrets are used here, so PRs from forks are safe.
+#   unit     Worker redirect tests (npm test)
+#   pages    the committed .html match build.py
+#   build    wrangler bundles the Worker and its assets (dry run, nothing uploaded)
+#   e2e      the full site over HTTP on a local wrangler dev server (npm run test:e2e)
+#   secrets  gitleaks scan of the whole history
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - run: npm test
+
+  pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - run: python3 build.py && git diff --exit-code
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npx wrangler deploy --dry-run --outdir dist
+
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: Start the site locally
+        run: |
+          nohup npx wrangler dev --port 8787 --local-upstream www.zapakid.ro --show-interactive-dev-session=false < /dev/null > "$RUNNER_TEMP/wrangler.log" 2>&1 &
+          for i in $(seq 1 60); do
+            curl -sf --max-time 2 -o /dev/null http://127.0.0.1:8787/ && { echo "up after ${i}s"; exit 0; }
+            sleep 1
+          done
+          cat "$RUNNER_TEMP/wrangler.log"; exit 1
+      - run: npm run test:e2e
+        env:
+          BASE_URL: http://127.0.0.1:8787
+      - if: failure()
+        run: cat "$RUNNER_TEMP/wrangler.log"
+
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - run: docker run --rm -v "$PWD:/repo" ghcr.io/gitleaks/gitleaks:v8.30.1 git /repo --no-banner --redact

@@ -16,8 +16,7 @@
   // The Worker owns these hostnames and their DNS records (not Terraform, see the infra repo). No workers.dev URL.
   "routes": [
     { "pattern": "www.zapakid.ro", "custom_domain": true },
-    { "pattern": "zapakid.ro", "custom_domain": true },
-    { "pattern": "app.zapakid.ro", "custom_domain": true }
+    { "pattern": "zapakid.ro", "custom_domain": true }
   ],
   "workers_dev": false,
 
