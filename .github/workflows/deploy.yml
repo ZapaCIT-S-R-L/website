@@ -53,20 +53,25 @@ jobs:
           title=$(jq -r 'if .number then "PR #\(.number) \(.title)" else empty end' <<<"$pr")
           # shellcheck disable=SC2086 # one argument per label
           version=$(git tag -l | node scripts/next-version.js $labels)
+          previous=$(git tag -l 'v*' --sort=-v:refname | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | head -1 || true)
+          if [ -n "$previous" ]; then url="https://github.com/$REPO/compare/$previous...$version"
+          else url="https://github.com/$REPO/tree/$version"; fi
           message=${title:-$(git log -1 --format=%s "$SHA")}
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git tag -a "$version" -m "$message" "$SHA"
           git push origin "$version"
-          echo "version=$version" >> "$GITHUB_OUTPUT"
-          echo "message=$message" >> "$GITHUB_OUTPUT"
+          { echo "version=$version"; echo "message=$message"; echo "url=$url"; } >> "$GITHUB_OUTPUT"
           echo "Releasing $version: $message" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Deploy
         env:
           VERSION: ${{ steps.version.outputs.version }}
           MESSAGE: ${{ steps.version.outputs.message }}
-        run: npx wrangler deploy --tag "$VERSION" --message "$MESSAGE"
+          VERSION_URL: ${{ steps.version.outputs.url }}
+        run: >-
+          npx wrangler deploy --tag "$VERSION" --message "$MESSAGE"
+          --var "VERSION:$VERSION" --var "VERSION_URL:$VERSION_URL"
 
       - name: End-to-end tests against the live site
         id: smoke

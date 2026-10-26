@@ -84,3 +84,39 @@ test("plain HTTP is upgraded to HTTPS", { skip: !LIVE && "live only" }, async ()
   assert.ok([301, 308].includes(res.status), `status ${res.status}`);
   assert.match(res.headers.get("location"), /^https:\/\/www\.zapakid\.ro\//);
 });
+
+const REPO = "https://github.com/ZapaCIT-S-R-L/website";
+for (const [path, home] of [
+  ["/", "/"],
+  ["/en/contact", "/en/"],
+  ["/de/privacy", "/de/"],
+]) {
+  test(`footer on ${path}: ZapaKid @ version | Contact | Privacy | hello@zapakid.ro`, async () => {
+    const html = await (await get(path)).text();
+    const footer = html.match(/<footer>([\s\S]*?)<\/footer>/)[1];
+    assert.match(
+      footer,
+      new RegExp(
+        `^\\s*<span class="brand"><a href="${home}">ZapaKid</a> @ <a class="version" href="([^"]+)">([^<]+)</a></span>`,
+      ),
+    );
+    const [, href, version] = footer.match(/class="version" href="([^"]+)">([^<]+)</);
+    if (LIVE) {
+      assert.match(version, /^v\d+\.\d+\.\d+$/);
+      assert.ok(
+        href === `${REPO}/tree/${version}` || href.match(new RegExp(`^${REPO}/compare/v[\\d.]+\\.\\.\\.${version}$`)),
+        href,
+      );
+    } else {
+      assert.equal(version, "dev");
+      assert.equal(href, REPO);
+    }
+    assert.match(footer, new RegExp(`<a href="${home}contact">[^<]+</a><a href="${home}privacy">[^<]+</a>`));
+    assert.match(footer, /<a href="mailto:hello@zapakid\.ro">hello@zapakid\.ro<\/a>/);
+    assert.doesNotMatch(html, /__VERSION/);
+  });
+}
+
+test("no page mentions the old contact@ address", async () => {
+  for (const path of pages) assert.doesNotMatch(await (await get(path)).text(), /contact@zapakid\.ro/, path);
+});
