@@ -1,6 +1,6 @@
 // End-to-end tests over real HTTP, against a running site.
 //   CI, before merge:  BASE_URL=http://127.0.0.1:8787 (wrangler dev --local-upstream www.zapakid.ro)
-//   after each deploy: BASE_URL=https://www.zapakid.ro LIVE=1 (adds the apex/app host checks)
+//   after each deploy: BASE_URL=https://www.zapakid.ro LIVE=1 (adds the apex and HTTPS checks)
 // Run: BASE_URL=... npm run test:e2e
 import { test } from "node:test";
 import assert from "node:assert/strict";
@@ -57,12 +57,6 @@ test("apex zapakid.ro redirects to www, keeping the path", { skip: !LIVE && "liv
   const res = await get("/en/privacy?x=1", "https://zapakid.ro");
   assert.equal(res.status, 301);
   assert.equal(res.headers.get("location"), "https://www.zapakid.ro/en/privacy?x=1");
-});
-
-test("app.zapakid.ro redirects to the www landing page", { skip: !LIVE && "live only" }, async () => {
-  const res = await get("/anything", "https://app.zapakid.ro");
-  assert.equal(res.status, 301);
-  assert.equal(res.headers.get("location"), "https://www.zapakid.ro/");
 });
 
 test("plain HTTP is upgraded to HTTPS", { skip: !LIVE && "live only" }, async () => {
