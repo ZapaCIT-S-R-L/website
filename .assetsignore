@@ -25,3 +25,4 @@ eslint.config.js
 ruff.toml
 .nvmrc
 scripts
+.htmlvalidate.json

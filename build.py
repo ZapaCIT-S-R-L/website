@@ -452,7 +452,7 @@ def store(icon, small, name, url, soon):
     inner = f"{icon}<span><small>{small}</small><strong>{name}</strong></span>"
     if url:
         return f'<a class="store" href="{url}">{inner}</a>'
-    return f'<span class="store soon" aria-label="{name}: {soon}">{inner}<span class="pill">{soon}</span></span>'
+    return f'<span class="store soon">{inner}<span class="pill">{soon}</span></span>'
 
 
 def landing(lang):
@@ -487,7 +487,7 @@ def contact(lang):
     body = f"""<main class="page">
 <h1>{t["contact_title"]}</h1>
 <p>{escape(t["contact_intro"])}</p>
-<div class="contact-box"><a class="mail" href="mailto:{EMAIL}">{EMAIL}</a><br><a class="mail" href="tel:+40770972972">{PHONE[lang]}</a></div>
+<div class="contact-box"><a class="mail" href="mailto:{EMAIL}">{EMAIL}</a><br><a class="mail" href="tel:+40770972972">{PHONE[lang].replace(" ", "&nbsp;")}</a></div>
 <p>{escape(t["contact_privacy"])}</p>
 <h2>{t["company_h"]}</h2>
 <p>{COMPANY}</p>

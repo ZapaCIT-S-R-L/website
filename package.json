@@ -8,13 +8,14 @@
     "deploy": "wrangler deploy",
     "test": "node --test test/*.test.js && python3 -m unittest discover -s test -p \"test_*.py\"",
     "test:e2e": "node --test test/e2e/*.test.js",
-    "lint": "prettier --check . && eslint . && uvx ruff@0.17.2 check build.py test && uvx ruff@0.17.2 format --check build.py test test",
+    "lint": "html-validate \"*.html\" \"de/*.html\" \"en/*.html\" && prettier --check . && eslint . && uvx ruff@0.17.2 check build.py test && uvx ruff@0.17.2 format --check build.py test test",
     "format": "prettier --write . && uvx ruff@0.17.2 format build.py test"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "eslint": "10.13.0",
     "globals": "17.13.0",
+    "html-validate": "11.17.0",
     "prettier": "3.9.10",
     "wrangler": "^4.152.0"
   },
