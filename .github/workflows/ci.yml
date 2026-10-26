@@ -4,6 +4,7 @@
 #   build    wrangler bundles the Worker and its assets (dry run, nothing uploaded)
 #   e2e      the full site over HTTP on a local wrangler dev server (npm run test:e2e)
 #   secrets  gitleaks scan of the whole history
+#   lint     Prettier (spaces, formatting), ESLint (JS), Ruff (build.py), actionlint (these workflows)
 name: ci
 
 on:
@@ -73,3 +74,19 @@ jobs:
         with:
           fetch-depth: 0
       - run: docker run --rm -v "$PWD:/repo" ghcr.io/gitleaks/gitleaks:v8.30.1 git /repo --no-banner --redact
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - run: npm ci
+      - run: npx prettier --check .
+      - run: npx eslint .
+      - run: pip install ruff==0.17.2 && ruff check build.py && ruff format --check build.py
+      - run: docker run --rm -v "$PWD:/repo" -w /repo rhysd/actionlint:1.7.12 -color

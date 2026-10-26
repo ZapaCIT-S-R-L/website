@@ -1,0 +1,2 @@
+# Ruff checks and formats build.py.
+line-length = 120

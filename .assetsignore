@@ -18,3 +18,8 @@ CONTRIBUTING.md
 .github
 test
 dist
+.editorconfig
+.prettierrc.json
+.prettierignore
+eslint.config.js
+ruff.toml
