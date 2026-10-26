@@ -21,120 +21,109 @@ PLAY_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.6c-.3.3-.4
 T = {
     "ro": {
         "html_lang": "ro",
-        "title": "ZapaKid — Ajutorul de teme cu robotel, pentru toată familia",
-        "desc": "ZapaKid: tutore AI care vorbește cu copilul în română, germană sau engleză, teme din poză, teste, jocuri pentru care se câștigă monede la învățat și chat de familie criptat. În curând pe App Store și Google Play.",
+        "title": "ZapaKid — Chatul criptat al familiei, între părinți și copii",
+        "desc": "ZapaKid: chat criptat end-to-end între părinți și copii — mesaje, poze și mesaje vocale. Părinții adaugă copiii cu un cod QR. Date doar în UE, fără reclame. În curând pe App Store și Google Play.",
         "nav_contact": "Contact",
         "nav_privacy": "Confidențialitate",
-        "h1": "Învățatul, <span>cu un robotel prieten.</span>",
-        "lead": "ZapaKid îl ajută pe copil la teme, îi explică pe înțelesul lui și vorbește cu el în română, germană sau engleză. Exersează, câștigă monede și se joacă — iar părinții rămân aproape, printr-un chat de familie criptat.",
+        "h1": "Familia ta, <span>la un mesaj distanță.</span>",
+        "lead": "ZapaKid este chatul privat dintre părinți și copii: mesaje, poze și mesaje vocale, criptate end-to-end. Doar familia voastră le poate citi — nici măcar noi.",
         "dl": "Disponibil pe",
         "soon": "În curând",
         "signin": "Conectare doar cu Apple sau Google — fără parole, fără conturi noi de reținut.",
         "feat_h": "Ce găsești în ZapaKid",
         "features": [
             (
-                "🤖",
-                "Tutore AI cu voce",
-                "Copilul întreabă cu vocea, robotelul răspunde cu vocea, potrivit clasei lui: de la grădiniță la clasa a VIII-a.",
-            ),
-            (
-                "📷",
-                "Teme din poză",
-                "O poză cu exercițiul și robotelul îl ia pas cu pas — explică, nu doar dă răspunsul.",
-            ),
-            (
-                "✏️",
-                "Teste și exerciții",
-                "Exerciții pe clasă și teste care se deblochează pe rând, în ritmul copilului.",
-            ),
-            (
-                "🎮",
-                "Jocuri cu monede",
-                "Monedele câștigate la învățat deschid jocurile: șah cu roboți, blocuri, sudoku, curse și altele.",
-            ),
-            (
-                "💬",
-                "Chat de familie",
-                "Părinții și copiii vorbesc, fiecare în limba lui, cu traducere automată. Mesajele sunt criptate end-to-end.",
-            ),
-            (
                 "🔒",
-                "Controlul părinților",
-                "Părintele asociază telefonul copilului cu un cod QR și stabilește clasa, limbile și regulile.",
+                "Criptat end-to-end",
+                "Mesajele se criptează pe telefon. Cheile rămân pe telefoanele familiei; serverele noastre văd doar date criptate.",
             ),
+            ("💬", "Mesaje, poze și voce", "Text, fotografii și mesaje vocale între părinți și copii."),
+            (
+                "👨‍👩‍👧",
+                "Doar familia",
+                "Copilul vorbește doar cu părinții din familia lui. Fără căutare, fără profiluri publice, fără străini.",
+            ),
+            (
+                "📱",
+                "Copilul, adăugat de părinte",
+                "Părintele scanează un cod QR pe telefonul copilului. Copiii nu își fac singuri cont.",
+            ),
+            (
+                "🔁",
+                "Telefon nou, aceleași conversații",
+                "Conversațiile revin pe telefonul nou din keychain-ul criptat al telefonului sau de pe alt telefon din familie.",
+            ),
+            ("🇪🇺", "Date doar în UE", "Toate datele sunt stocate exclusiv în Uniunea Europeană."),
         ],
         "band": [
             (
-                "Pentru copii de la grădiniță la clasa a VIII-a",
-                "Totul se adaptează clasei: cuvinte simple pentru cei mici, explicații mai bogate pentru cei mari.",
+                "Pentru părinți de peste 18 ani",
+                "Contul de părinte se face doar cu Apple sau Google, iar telefonul confirmă că ai cel puțin 18 ani.",
             ),
-            ("Fără reclame, fără urmărire", "Nu vindem date și nu afișăm reclame. Site-ul nu folosește cookie-uri."),
+            (
+                "Fără reclame, fără urmărire",
+                "Nu vindem date, nu afișăm reclame și nu facem profilare. Site-ul nu folosește cookie-uri.",
+            ),
         ],
         "contact_title": "Contact",
         "contact_intro": "Ai o întrebare despre ZapaKid, o idee sau o problemă? Scrie-ne, răspundem de obicei în 1–2 zile lucrătoare.",
-        "contact_privacy": "Pentru cereri legate de datele personale (acces, ștergere etc.) folosește aceeași adresă și menționează „Date personale” în subiect.",
+        "contact_privacy": 'Pentru cereri legate de datele personale (acces, ștergere etc.) scrie-ne la <a href="mailto:privacy@zapakid.ro">privacy@zapakid.ro</a>.',
         "company_h": "Firma",
         "privacy_title": "Politica de confidențialitate",
-        "updated": "Ultima actualizare: 19 octombrie 2026",
+        "updated": "Ultima actualizare: 26 octombrie 2026",
         "privacy": [
             (
                 "Cine suntem",
                 [
-                    'ZapaKid este un produs al <b>Zapacit S.R.L.</b>, Str. Zambilei nr. 76, Ghimbav 507075, județul Brașov, România, J2020002568087, CUI RO43395664 („noi”), operator al datelor personale descrise aici, conform Regulamentului (UE) 2016/679 (GDPR). Contact: <a href="mailto:hello@zapakid.ro">hello@zapakid.ro</a>.'
+                    'ZapaKid este un produs al <b>Zapacit S.R.L.</b>, Str. Zambilei nr. 76, Ghimbav 507075, județul Brașov, România, J2020002568087, CUI RO43395664 („noi”), operator al datelor personale descrise aici, conform Regulamentului (UE) 2016/679 (GDPR). Contact pentru datele personale: <a href="mailto:privacy@zapakid.ro">privacy@zapakid.ro</a>.'
                 ],
             ),
             (
                 "Site-ul zapakid.ro",
                 [
-                    "Site-ul este doar o pagină de prezentare. Nu are conturi, formulare, cookie-uri sau instrumente de analiză și nu încarcă resurse de la terți. Serverul web înregistrează temporar, din motive de securitate, adresa IP, data și pagina cerută."
+                    "Site-ul este doar o pagină de prezentare. Nu are conturi, formulare, cookie-uri sau instrumente de analiză și nu încarcă resurse de la terți. Cloudflare, care găzduiește site-ul, înregistrează temporar, din motive de securitate, adresa IP, data și pagina cerută."
                 ],
             ),
             (
-                "Contul în aplicație: doar Apple sau Google",
+                "Contul: doar părinți, doar Apple sau Google",
                 [
-                    "Contul de părinte se creează exclusiv prin <b>Sign in with Apple</b> sau <b>Sign in with Google</b>. Nu avem parole. Primim de la Apple/Google un identificator unic al contului și, la prima conectare, numele și adresa de email (la Apple poate fi o adresă de redirecționare).",
-                    "Verificarea vârstei: aplicația cere telefonului doar confirmarea că părintele are cel puțin 18 ani; nu primim data nașterii. Dacă vârsta nu poate fi confirmată, aplicația nu creează un cont.",
-                    "Copiii nu își creează singuri cont: telefonul copilului funcționează doar după ce un părinte scanează codul QR și setează profilul copilului (prenume, vârstă, clasă, limbi).",
+                    "Contul de părinte se creează exclusiv prin <b>Sign in with Apple</b> sau <b>Sign in with Google</b>. Nu avem parole. Primim de la Apple/Google un identificator unic al contului și adresa de email.",
+                    "Verificarea vârstei: aplicația cere telefonului (Apple Declared Age Range, Google Play Age Signals) doar confirmarea că părintele are cel puțin 18 ani; nu primim data nașterii. Dacă telefonul indică un minor, aplicația nu creează contul.",
+                    "Copiii nu își creează singuri cont: telefonul copilului funcționează doar după ce un părinte scanează codul QR, acceptă Acordul părintelui și setează profilul copilului (poreclă, interval de vârstă, avatar).",
+                    "Dacă îți pierzi accesul, îți recuperezi contul cu Apple/Google, cu un cod pe email sau cu un cod prin SMS (trimise prin <b>Twilio</b>).",
                 ],
             ),
             (
-                "Chaturile și notițele familiei",
+                "Conversațiile familiei",
                 [
-                    "Mesajele, fișierele atașate și notițele sunt <b>criptate end-to-end</b> pe telefon (AES-256-GCM, cheile rămân pe dispozitivele familiei). Serverele noastre stochează doar datele criptate și nu le pot citi.",
-                    "Traducerea se face pe telefon când sistemul o permite. Pentru limbile pe care telefonul nu le poate traduce (de exemplu româna), textul mesajului este trimis criptat (HTTPS) prin serverul nostru către Google pentru traducere; nu îl stocăm.",
-                    "Pentru notificări folosim serviciile Apple (APNs) și Google; pentru aceasta păstrăm un identificator de notificare al telefonului.",
-                ],
-            ),
-            (
-                "Funcțiile AI (tutore, voce, poze, teste)",
-                [
-                    "Întrebările copilului, pozele trimise (teme, cub Rubik, orar) și textele citite cu voce sunt trimise prin serverul nostru către <b>Google Cloud (Vertex AI, Gemini)</b>, care acționează ca persoană împuternicită. Nu trimitem numele, emailul sau alte date de identificare și nu stocăm acest conținut pe serverele noastre. Conform condițiilor Google Cloud, Google nu folosește aceste date pentru antrenarea modelelor.",
-                    "Istoricul conversațiilor cu tutorele rămâne pe telefon.",
+                    "Mesajele, pozele și mesajele vocale sunt <b>criptate end-to-end</b> pe telefon. Cheile rămân pe telefoanele familiei și în keychain-ul criptat al telefonului (iCloud Keychain, Android). Serverele noastre stochează doar datele criptate și <b>nu le pot citi, asculta sau recupera</b>, nici la cererea unei autorități.",
+                    "Pentru notificări folosim Apple (APNs) și Google (FCM). Notificările spun doar cine a scris, niciodată conținutul.",
                 ],
             ),
             (
                 "Unde sunt datele și cui le transmitem",
                 [
-                    "Datele sunt stocate pe servere proprii, administrate de echipa noastră, în România (UE). Pentru livrarea rapidă și sigură a site-ului și a aplicației (DNS, rețea de distribuție a conținutului, protecție împotriva atacurilor) colaborăm cu <b>Cloudflare</b>: traficul trece criptat prin rețeaua Cloudflare, dar datele contului și conținutul familiei rămân stocate exclusiv pe serverele noastre. Persoane împuternicite: Cloudflare (livrare și protecție), Google (conectare, AI, traducere, notificări), Apple (conectare, verificarea vârstei, notificări). Când acești parteneri prelucrează date în afara UE, transferul se face în baza garanțiilor prevăzute de GDPR (Cadrul UE–SUA privind protecția datelor sau clauze contractuale standard). Datele pot fi transmise autorităților doar când legea o cere.",
+                    "Toate datele sunt stocate <b>exclusiv în UE</b>. Persoane împuternicite, fiecare cu acord de prelucrare a datelor: <b>Cloudflare</b> (găzduire și stocare), <b>Google</b> (conectare, notificări pe Android, copii de siguranță criptate, pagina de status), <b>Apple</b> (conectare, verificarea vârstei, notificări pe iOS), <b>Twilio</b> (coduri prin SMS și email). Când Apple, Google sau Twilio prelucrează date în afara UE pentru conectare sau notificări, transferul se face în baza Cadrului UE–SUA privind protecția datelor sau a clauzelor contractuale standard.",
                     "Nu vindem date, nu afișăm reclame și nu facem profilare.",
                 ],
             ),
             (
                 "Cât timp păstrăm datele",
                 [
-                    "Datele contului se păstrează cât timp există contul. Părintele poate șterge oricând toate datele familiei din aplicație (contul 👤 → „Șterge toate datele familiei”): mesajele, profilurile copiilor și sesiunile se șterg imediat. Copiile de siguranță se șterg după cel mult 90 de zile."
+                    "Mesajele criptate: cât timp conversația există pe cel puțin un telefon. Metadatele conversației (cine, când, dimensiune): până când ambele părți șterg conversația. Jurnalele de securitate: 90 de zile.",
+                    "Ștergerea contului sau a unui copil se face imediat, din aplicație. Copilul nu își poate șterge singur contul; o face părintele. Când ultimul părinte își șterge contul, toți copiii din familie sunt șterși. Copiile de siguranță criptate se rotesc după 30 de zile. Dovada acordului părintelui se păstrează pe durata contului și încă 5 ani.",
                 ],
             ),
             (
                 "Temeiul legal și copiii",
                 [
-                    "Prelucrăm datele pentru a furniza serviciul cerut (executarea contractului, art. 6(1)(b) GDPR) și pentru securitate (interes legitim, art. 6(1)(f)). Datele copiilor sunt prelucrate cu acordul și sub controlul părintelui sau tutorelui legal (art. 8 GDPR)."
+                    "Prelucrăm datele pentru a furniza serviciul (executarea contractului, art. 6(1)(b) GDPR), pentru securitate (interes legitim, art. 6(1)(f)) și pentru a dovedi acordul părintelui (obligație legală, art. 6(1)(c) și art. 7). Datele copiilor sunt prelucrate pe baza acordului părintelui sau tutorelui legal (art. 8 GDPR)."
                 ],
             ),
             (
                 "Drepturile tale",
                 [
-                    'Ai dreptul de acces, rectificare, ștergere, restricționare, portabilitate și opoziție. Scrie-ne la <a href="mailto:hello@zapakid.ro">hello@zapakid.ro</a>. Poți depune plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP, <a href="https://www.dataprotection.ro">dataprotection.ro</a>).'
+                    'Ai dreptul de acces, rectificare, ștergere, restricționare, portabilitate și opoziție, pentru tine și pentru copiii tăi. Scrie-ne la <a href="mailto:privacy@zapakid.ro">privacy@zapakid.ro</a>; răspundem în cel mult o lună. Poți depune plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP, <a href="https://www.dataprotection.ro">dataprotection.ro</a>).'
                 ],
             ),
             (
@@ -147,123 +136,109 @@ T = {
     },
     "de": {
         "html_lang": "de",
-        "title": "ZapaKid — Hausaufgabenhilfe mit Roboter, für die ganze Familie",
-        "desc": "ZapaKid: KI-Tutor, der mit deinem Kind Deutsch, Rumänisch oder Englisch spricht, Hausaufgaben per Foto, Tests, Spiele, für die man beim Lernen Münzen verdient, und ein verschlüsselter Familienchat. Bald im App Store und bei Google Play.",
+        "title": "ZapaKid — Der verschlüsselte Familienchat für Eltern und Kinder",
+        "desc": "ZapaKid: Ende-zu-Ende-verschlüsselter Chat zwischen Eltern und Kindern — Nachrichten, Fotos und Sprachnachrichten. Eltern fügen Kinder per QR-Code hinzu. Daten nur in der EU, keine Werbung. Bald im App Store und bei Google Play.",
         "nav_contact": "Kontakt",
         "nav_privacy": "Datenschutz",
-        "h1": "Lernen, <span>mit einem Roboter-Freund.</span>",
-        "lead": "ZapaKid hilft deinem Kind bei den Hausaufgaben, erklärt alles kindgerecht und spricht Deutsch, Rumänisch oder Englisch. Üben, Münzen verdienen, spielen — und die Eltern bleiben über einen verschlüsselten Familienchat in der Nähe.",
+        "h1": "Deine Familie, <span>eine Nachricht entfernt.</span>",
+        "lead": "ZapaKid ist der private Chat zwischen Eltern und Kindern: Nachrichten, Fotos und Sprachnachrichten, Ende-zu-Ende-verschlüsselt. Nur eure Familie kann sie lesen — nicht einmal wir.",
         "dl": "Erhältlich im",
         "soon": "Bald",
         "signin": "Anmeldung nur mit Apple oder Google — keine Passwörter, kein neues Konto zum Merken.",
         "feat_h": "Was ZapaKid kann",
         "features": [
             (
-                "🤖",
-                "KI-Tutor mit Stimme",
-                "Dein Kind fragt per Sprache, der Roboter antwortet per Sprache, passend zur Klasse: vom Kindergarten bis Klasse 8.",
-            ),
-            (
-                "📷",
-                "Hausaufgaben per Foto",
-                "Ein Foto der Aufgabe, und der Roboter geht sie Schritt für Schritt durch — er erklärt, statt nur die Lösung zu verraten.",
-            ),
-            (
-                "✏️",
-                "Tests und Übungen",
-                "Übungen pro Klasse und Tests, die nacheinander freigeschaltet werden, im Tempo des Kindes.",
-            ),
-            (
-                "🎮",
-                "Spiele mit Münzen",
-                "Beim Lernen verdiente Münzen öffnen die Spiele: Roboter-Schach, Blöcke, Sudoku, Rennen und mehr.",
-            ),
-            (
-                "💬",
-                "Familienchat",
-                "Eltern und Kinder schreiben sich, jeder in seiner Sprache, mit automatischer Übersetzung. Ende-zu-Ende-verschlüsselt.",
-            ),
-            (
                 "🔒",
-                "Eltern haben die Kontrolle",
-                "Eltern verbinden das Handy des Kindes per QR-Code und legen Klasse, Sprachen und Regeln fest.",
+                "Ende-zu-Ende-verschlüsselt",
+                "Nachrichten werden auf dem Telefon verschlüsselt. Die Schlüssel bleiben auf den Telefonen der Familie; unsere Server sehen nur verschlüsselte Daten.",
             ),
+            ("💬", "Text, Fotos und Sprache", "Nachrichten, Fotos und Sprachnachrichten zwischen Eltern und Kindern."),
+            (
+                "👨‍👩‍👧",
+                "Nur die Familie",
+                "Dein Kind schreibt nur mit den Eltern seiner Familie. Keine Suche, keine öffentlichen Profile, keine Fremden.",
+            ),
+            (
+                "📱",
+                "Eltern fügen Kinder hinzu",
+                "Ein Elternteil scannt einen QR-Code auf dem Telefon des Kindes. Kinder legen kein eigenes Konto an.",
+            ),
+            (
+                "🔁",
+                "Neues Telefon, gleiche Chats",
+                "Die Chats kommen aus dem verschlüsselten Schlüsselbund des Telefons oder von einem anderen Telefon der Familie zurück.",
+            ),
+            ("🇪🇺", "Daten nur in der EU", "Alle Daten werden ausschließlich in der Europäischen Union gespeichert."),
         ],
         "band": [
             (
-                "Für Kinder vom Kindergarten bis Klasse 8",
-                "Alles passt sich der Klasse an: einfache Worte für die Kleinen, ausführlichere Erklärungen für die Großen.",
+                "Für Eltern ab 18",
+                "Das Elternkonto gibt es nur mit Apple oder Google, und das Telefon bestätigt, dass du mindestens 18 bist.",
             ),
             (
                 "Keine Werbung, kein Tracking",
-                "Wir verkaufen keine Daten und zeigen keine Werbung. Die Website verwendet keine Cookies.",
+                "Wir verkaufen keine Daten, zeigen keine Werbung und erstellen keine Profile. Die Website verwendet keine Cookies.",
             ),
         ],
         "contact_title": "Kontakt",
-        "contact_intro": "Eine Frage zu ZapaKid, eine Idee oder ein Problem? Schreib uns, wir antworten meist innerhalb von 1–2 Werktagen.",
-        "contact_privacy": "Für Anfragen zu personenbezogenen Daten (Auskunft, Löschung usw.) nutze dieselbe Adresse mit dem Betreff „Datenschutz“.",
+        "contact_intro": "Du hast eine Frage zu ZapaKid, eine Idee oder ein Problem? Schreib uns, wir antworten meist innerhalb von 1–2 Werktagen.",
+        "contact_privacy": 'Für Anfragen zu personenbezogenen Daten (Auskunft, Löschung usw.) schreib an <a href="mailto:privacy@zapakid.ro">privacy@zapakid.ro</a>.',
         "company_h": "Unternehmen",
         "privacy_title": "Datenschutzerklärung",
-        "updated": "Zuletzt aktualisiert: 19. Oktober 2026",
+        "updated": "Zuletzt aktualisiert: 26. Oktober 2026",
         "privacy": [
             (
                 "Wer wir sind",
                 [
-                    'ZapaKid ist ein Produkt der <b>Zapacit S.R.L.</b>, Str. Zambilei nr. 76, 507075 Ghimbav, Kreis Brașov, Rumänien, J2020002568087, USt-IdNr. RO43395664 („wir“), Verantwortlicher für die hier beschriebenen personenbezogenen Daten gemäß Verordnung (EU) 2016/679 (DSGVO). Kontakt: <a href="mailto:hello@zapakid.ro">hello@zapakid.ro</a>.'
+                    'ZapaKid ist ein Produkt der <b>Zapacit S.R.L.</b>, Str. Zambilei nr. 76, 507075 Ghimbav, Kreis Brașov, Rumänien, J2020002568087, USt-IdNr. RO43395664 („wir“), Verantwortlicher für die hier beschriebenen personenbezogenen Daten gemäß Verordnung (EU) 2016/679 (DSGVO). Kontakt für Datenschutz: <a href="mailto:privacy@zapakid.ro">privacy@zapakid.ro</a>.'
                 ],
             ),
             (
                 "Die Website zapakid.ro",
                 [
-                    "Die Website ist nur eine Vorstellungsseite. Sie hat keine Konten, Formulare, Cookies oder Analysewerkzeuge und lädt keine Inhalte von Dritten. Der Webserver speichert aus Sicherheitsgründen vorübergehend IP-Adresse, Zeitpunkt und aufgerufene Seite."
+                    "Die Website ist nur eine Präsentationsseite. Sie hat keine Konten, Formulare, Cookies oder Analysewerkzeuge und lädt keine Inhalte von Dritten. Cloudflare, das die Website hostet, protokolliert aus Sicherheitsgründen vorübergehend IP-Adresse, Datum und aufgerufene Seite."
                 ],
             ),
             (
-                "Das Konto in der App: nur Apple oder Google",
+                "Das Konto: nur Eltern, nur Apple oder Google",
                 [
-                    "Ein Elternkonto wird ausschließlich mit <b>Mit Apple anmelden</b> oder <b>Mit Google anmelden</b> erstellt. Wir haben keine Passwörter. Wir erhalten von Apple/Google eine eindeutige Kontokennung und bei der ersten Anmeldung Name und E-Mail-Adresse (bei Apple ggf. eine Weiterleitungsadresse).",
-                    "Altersprüfung: Die App fragt das Handy nur, ob der Elternteil mindestens 18 Jahre alt ist; das Geburtsdatum erhalten wir nicht. Kann das Alter nicht bestätigt werden, wird kein Konto erstellt.",
-                    "Kinder erstellen kein eigenes Konto: Das Handy des Kindes funktioniert erst, wenn ein Elternteil den QR-Code scannt und das Profil des Kindes festlegt (Vorname, Alter, Klasse, Sprachen).",
+                    "Ein Elternkonto wird ausschließlich mit <b>Mit Apple anmelden</b> oder <b>Mit Google anmelden</b> erstellt. Wir haben keine Passwörter. Wir erhalten von Apple/Google eine eindeutige Kontokennung und die E-Mail-Adresse.",
+                    "Altersprüfung: Die App fragt das Telefon (Apple Declared Age Range, Google Play Age Signals) nur, ob der Elternteil mindestens 18 Jahre alt ist; ein Geburtsdatum erhalten wir nicht. Meldet das Telefon eine minderjährige Person, wird kein Konto erstellt.",
+                    "Kinder legen kein eigenes Konto an: Das Telefon des Kindes funktioniert erst, wenn ein Elternteil den QR-Code scannt, der Elternvereinbarung zustimmt und das Profil des Kindes anlegt (Spitzname, Altersbereich, Avatar).",
+                    "Wenn du den Zugang verlierst, stellst du dein Konto mit Apple/Google, einem Code per E-Mail oder einem Code per SMS wieder her (versendet über <b>Twilio</b>).",
                 ],
             ),
             (
-                "Chats und Notizen der Familie",
+                "Die Chats der Familie",
                 [
-                    "Nachrichten, Anhänge und Notizen sind auf dem Handy <b>Ende-zu-Ende-verschlüsselt</b> (AES-256-GCM, die Schlüssel bleiben auf den Geräten der Familie). Unsere Server speichern nur verschlüsselte Daten und können sie nicht lesen.",
-                    "Übersetzt wird auf dem Handy, wenn das System es unterstützt. Für Sprachen, die das Handy nicht übersetzen kann (z. B. Rumänisch), wird der Nachrichtentext verschlüsselt (HTTPS) über unseren Server zur Übersetzung an Google gesendet; wir speichern ihn nicht.",
-                    "Für Benachrichtigungen nutzen wir die Dienste von Apple (APNs) und Google; dafür speichern wir eine Benachrichtigungskennung des Handys.",
+                    "Nachrichten, Fotos und Sprachnachrichten werden auf dem Telefon <b>Ende-zu-Ende-verschlüsselt</b>. Die Schlüssel bleiben auf den Telefonen der Familie und im verschlüsselten Schlüsselbund des Telefons (iCloud-Schlüsselbund, Android). Unsere Server speichern nur verschlüsselte Daten und <b>können sie nicht lesen, anhören oder wiederherstellen</b>, auch nicht auf Verlangen einer Behörde.",
+                    "Für Benachrichtigungen nutzen wir Apple (APNs) und Google (FCM). Benachrichtigungen sagen nur, wer geschrieben hat, nie den Inhalt.",
                 ],
             ),
             (
-                "KI-Funktionen (Tutor, Stimme, Fotos, Tests)",
+                "Wo die Daten liegen und wer sie erhält",
                 [
-                    "Die Fragen des Kindes, gesendete Fotos (Hausaufgaben, Zauberwürfel, Stundenplan) und vorgelesene Texte werden über unseren Server an <b>Google Cloud (Vertex AI, Gemini)</b> als Auftragsverarbeiter gesendet. Wir senden weder Namen noch E-Mail oder andere Identifikationsdaten und speichern diese Inhalte nicht auf unseren Servern. Gemäß den Bedingungen von Google Cloud verwendet Google diese Daten nicht zum Trainieren von Modellen.",
-                    "Der Gesprächsverlauf mit dem Tutor bleibt auf dem Handy.",
-                ],
-            ),
-            (
-                "Wo die Daten liegen und an wen wir sie weitergeben",
-                [
-                    "Die Daten werden auf eigenen, von unserem Team betriebenen Servern in Rumänien (EU) gespeichert. Für eine schnelle und sichere Auslieferung von Website und App (DNS, Content-Delivery-Netzwerk, Schutz vor Angriffen) arbeiten wir mit <b>Cloudflare</b> zusammen: Der Datenverkehr läuft verschlüsselt über das Cloudflare-Netzwerk, Kontodaten und Familieninhalte bleiben jedoch ausschließlich auf unseren Servern gespeichert. Auftragsverarbeiter: Cloudflare (Auslieferung und Schutz), Google (Anmeldung, KI, Übersetzung, Benachrichtigungen), Apple (Anmeldung, Altersprüfung, Benachrichtigungen). Verarbeiten diese Partner Daten außerhalb der EU, erfolgt die Übermittlung auf Grundlage der Garantien der DSGVO (EU-US Data Privacy Framework oder Standardvertragsklauseln). An Behörden geben wir Daten nur weiter, wenn das Gesetz es verlangt.",
+                    "Alle Daten werden <b>ausschließlich in der EU</b> gespeichert. Auftragsverarbeiter, jeweils mit Auftragsverarbeitungsvertrag: <b>Cloudflare</b> (Hosting und Speicherung), <b>Google</b> (Anmeldung, Benachrichtigungen auf Android, verschlüsselte Sicherungskopien, Statusseite), <b>Apple</b> (Anmeldung, Altersprüfung, Benachrichtigungen auf iOS), <b>Twilio</b> (Codes per SMS und E-Mail). Wenn Apple, Google oder Twilio für Anmeldung oder Benachrichtigungen Daten außerhalb der EU verarbeiten, geschieht das auf Grundlage des EU-US-Datenschutzrahmens oder von Standardvertragsklauseln.",
                     "Wir verkaufen keine Daten, zeigen keine Werbung und erstellen keine Profile.",
                 ],
             ),
             (
-                "Speicherdauer",
+                "Wie lange wir Daten speichern",
                 [
-                    "Kontodaten speichern wir, solange das Konto besteht. Eltern können jederzeit alle Familiendaten in der App löschen (Konto 👤 → „Alle Familiendaten löschen“): Nachrichten, Kinderprofile und Sitzungen werden sofort gelöscht. Sicherungskopien werden nach spätestens 90 Tagen gelöscht."
+                    "Verschlüsselte Nachrichten: solange der Chat auf mindestens einem Telefon existiert. Metadaten des Chats (wer, wann, Größe): bis beide Seiten den Chat löschen. Sicherheitsprotokolle: 90 Tage.",
+                    "Das Löschen des Kontos oder eines Kindes erfolgt sofort in der App. Ein Kind kann sein Konto nicht selbst löschen; das macht ein Elternteil. Löscht der letzte Elternteil sein Konto, werden alle Kinder der Familie gelöscht. Verschlüsselte Sicherungskopien werden nach 30 Tagen überschrieben. Der Nachweis der elterlichen Einwilligung wird für die Dauer des Kontos und weitere 5 Jahre aufbewahrt.",
                 ],
             ),
             (
                 "Rechtsgrundlage und Kinder",
                 [
-                    "Wir verarbeiten die Daten, um den gewünschten Dienst zu erbringen (Vertragserfüllung, Art. 6 Abs. 1 lit. b DSGVO), und für die Sicherheit (berechtigtes Interesse, Art. 6 Abs. 1 lit. f). Daten von Kindern werden mit Zustimmung und unter Kontrolle der Eltern bzw. Erziehungsberechtigten verarbeitet (Art. 8 DSGVO)."
+                    "Wir verarbeiten Daten, um den Dienst bereitzustellen (Vertragserfüllung, Art. 6 Abs. 1 lit. b DSGVO), für die Sicherheit (berechtigtes Interesse, Art. 6 Abs. 1 lit. f) und um die elterliche Einwilligung nachzuweisen (rechtliche Verpflichtung, Art. 6 Abs. 1 lit. c und Art. 7). Daten von Kindern werden auf Grundlage der Einwilligung der Eltern oder Erziehungsberechtigten verarbeitet (Art. 8 DSGVO)."
                 ],
             ),
             (
                 "Deine Rechte",
                 [
-                    'Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch. Schreib uns an <a href="mailto:hello@zapakid.ro">hello@zapakid.ro</a>. Du kannst dich bei der rumänischen Datenschutzbehörde (ANSPDCP, <a href="https://www.dataprotection.ro">dataprotection.ro</a>) oder der Aufsichtsbehörde deines Landes beschweren.'
+                    'Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch, für dich und deine Kinder. Schreib an <a href="mailto:privacy@zapakid.ro">privacy@zapakid.ro</a>; wir antworten innerhalb eines Monats. Du kannst dich bei der rumänischen Datenschutzbehörde ANSPDCP (<a href="https://www.dataprotection.ro">dataprotection.ro</a>) oder bei der Aufsichtsbehörde deines Landes beschweren.'
                 ],
             ),
             (
@@ -276,120 +251,106 @@ T = {
     },
     "en": {
         "html_lang": "en",
-        "title": "ZapaKid — Homework help with a robot friend, for the whole family",
-        "desc": "ZapaKid: an AI tutor that talks with your child in English, German or Romanian, homework from a photo, tests, games unlocked with coins earned by learning, and an encrypted family chat. Coming soon to the App Store and Google Play.",
+        "title": "ZapaKid — The encrypted family chat for parents and kids",
+        "desc": "ZapaKid: end-to-end encrypted chat between parents and kids — messages, photos and voice messages. Parents add their kids with a QR code. Data in the EU only, no ads. Coming soon to the App Store and Google Play.",
         "nav_contact": "Contact",
         "nav_privacy": "Privacy",
-        "h1": "Learning, <span>with a robot friend.</span>",
-        "lead": "ZapaKid helps your child with homework, explains things in words they understand, and speaks English, German or Romanian. Practise, earn coins, play — while parents stay close through an encrypted family chat.",
+        "h1": "Your family, <span>one message away.</span>",
+        "lead": "ZapaKid is the private chat between parents and kids: messages, photos and voice messages, end-to-end encrypted. Only your family can read them — not even us.",
         "dl": "Get it on",
         "soon": "Soon",
         "signin": "Sign in with Apple or Google only — no passwords, no new account to remember.",
-        "feat_h": "What's inside ZapaKid",
+        "feat_h": "What's in ZapaKid",
         "features": [
             (
-                "🤖",
-                "AI tutor with a voice",
-                "Your child asks out loud and the robot answers out loud, at their grade level: from kindergarten to grade 8.",
-            ),
-            (
-                "📷",
-                "Homework from a photo",
-                "Snap the exercise and the robot works through it step by step — it explains rather than just giving the answer.",
-            ),
-            (
-                "✏️",
-                "Tests and practice",
-                "Practice for every grade and tests that unlock one by one, at your child's pace.",
-            ),
-            (
-                "🎮",
-                "Games with coins",
-                "Coins earned by learning unlock the games: robot chess, blocks, sudoku, racing and more.",
-            ),
-            (
-                "💬",
-                "Family chat",
-                "Parents and kids talk, each in their own language, with automatic translation. End-to-end encrypted.",
-            ),
-            (
                 "🔒",
-                "Parents in control",
-                "Parents pair the child's phone with a QR code and set the grade, languages and rules.",
+                "End-to-end encrypted",
+                "Messages are encrypted on the phone. The keys stay on your family's phones; our servers only see encrypted data.",
             ),
+            ("💬", "Text, photos and voice", "Messages, photos and voice messages between parents and kids."),
+            (
+                "👨‍👩‍👧",
+                "Family only",
+                "Your child can only chat with the parents in their family. No search, no public profiles, no strangers.",
+            ),
+            (
+                "📱",
+                "Kids are added by a parent",
+                "A parent scans a QR code on the child's phone. Kids don't create their own accounts.",
+            ),
+            (
+                "🔁",
+                "New phone, same chats",
+                "Chats come back from the phone's encrypted keychain or from another phone in your family.",
+            ),
+            ("🇪🇺", "Data in the EU only", "All data is stored in the European Union only."),
         ],
         "band": [
             (
-                "For kids from kindergarten to grade 8",
-                "Everything adapts to the grade: simple words for the little ones, richer explanations for older kids.",
+                "For parents aged 18+",
+                "Parent accounts use Apple or Google only, and the phone confirms you're at least 18.",
             ),
-            ("No ads, no tracking", "We don't sell data or show ads. This website uses no cookies."),
+            ("No ads, no tracking", "We don't sell data, show ads or build profiles. This site uses no cookies."),
         ],
         "contact_title": "Contact",
-        "contact_intro": "A question about ZapaKid, an idea or a problem? Write to us; we usually reply within 1–2 working days.",
-        "contact_privacy": "For personal-data requests (access, deletion and so on) use the same address with “Personal data” in the subject.",
+        "contact_intro": "Got a question about ZapaKid, an idea or a problem? Write to us; we usually reply within 1–2 working days.",
+        "contact_privacy": 'For personal data requests (access, deletion and so on), write to <a href="mailto:privacy@zapakid.ro">privacy@zapakid.ro</a>.',
         "company_h": "Company",
         "privacy_title": "Privacy policy",
-        "updated": "Last updated: 19 October 2026",
+        "updated": "Last updated: 26 October 2026",
         "privacy": [
             (
                 "Who we are",
                 [
-                    'ZapaKid is a product of <b>Zapacit S.R.L.</b>, Str. Zambilei nr. 76, Ghimbav 507075, Brașov County, Romania, J2020002568087, VAT RO43395664 (“we”), the controller of the personal data described here under Regulation (EU) 2016/679 (GDPR). Contact: <a href="mailto:hello@zapakid.ro">hello@zapakid.ro</a>.'
+                    'ZapaKid is a product of <b>Zapacit S.R.L.</b>, Str. Zambilei nr. 76, Ghimbav 507075, Brașov County, Romania, J2020002568087, VAT RO43395664 (“we”), the controller of the personal data described here under Regulation (EU) 2016/679 (GDPR). Privacy contact: <a href="mailto:privacy@zapakid.ro">privacy@zapakid.ro</a>.'
                 ],
             ),
             (
                 "The zapakid.ro website",
                 [
-                    "The website is only a presentation page. It has no accounts, forms, cookies or analytics and loads nothing from third parties. For security, the web server temporarily logs the IP address, time and page requested."
+                    "This site is a presentation page only. It has no accounts, forms, cookies or analytics and loads nothing from other sites. Cloudflare, which hosts the site, briefly logs the IP address, date and page requested, for security."
                 ],
             ),
             (
-                "Your account in the app: Apple or Google only",
+                "Accounts: parents only, Apple or Google only",
                 [
-                    "A parent account is created only with <b>Sign in with Apple</b> or <b>Sign in with Google</b>. We have no passwords. Apple/Google give us a unique account identifier and, on first sign-in, your name and email address (Apple may give a relay address).",
-                    "Age check: the app only asks the phone to confirm that the parent is at least 18; we never receive a date of birth. If the age can't be confirmed, no account is created.",
-                    "Children don't create accounts: a child's phone works only after a parent scans its QR code and sets up the child's profile (first name, age, grade, languages).",
+                    "A parent account is created only with <b>Sign in with Apple</b> or <b>Sign in with Google</b>. We have no passwords. Apple/Google give us a unique account identifier and your email address.",
+                    "Age check: the app asks the phone (Apple Declared Age Range, Google Play Age Signals) only to confirm the parent is at least 18; we never receive a date of birth. If the phone reports a minor, no account is created.",
+                    "Kids don't create their own accounts: a child's phone only works after a parent scans the QR code, accepts the Parental Agreement and sets up the child's profile (nickname, age range, avatar).",
+                    "If you lose access, you recover your account with Apple/Google, an email code or an SMS code (sent through <b>Twilio</b>).",
                 ],
             ),
             (
-                "Family chats and notes",
+                "Your family's chats",
                 [
-                    "Messages, attachments and notes are <b>end-to-end encrypted</b> on the phone (AES-256-GCM; the keys stay on the family's devices). Our servers store only encrypted data and cannot read it.",
-                    "Translation happens on the phone when the system supports it. For languages the phone can't translate (for example Romanian), the message text is sent encrypted (HTTPS) through our server to Google for translation; we don't store it.",
-                    "For notifications we use Apple (APNs) and Google services, which needs a notification identifier for the phone.",
+                    "Messages, photos and voice messages are <b>end-to-end encrypted</b> on the phone. The keys stay on your family's phones and in the phone's encrypted keychain (iCloud Keychain, Android). Our servers store only encrypted data and <b>cannot read, listen to or recover it</b>, even if an authority asks.",
+                    "For notifications we use Apple (APNs) and Google (FCM). Notifications only say who wrote, never what.",
                 ],
             ),
             (
-                "AI features (tutor, voice, photos, tests)",
+                "Where data is stored and who receives it",
                 [
-                    "Your child's questions, photos they send (homework, Rubik's cube, timetable) and texts read aloud are sent through our server to <b>Google Cloud (Vertex AI, Gemini)</b> as our processor. We don't send names, email or other identifying data, and we don't store this content on our servers. Under Google Cloud's terms, Google doesn't use this data to train its models.",
-                    "The tutor conversation history stays on the phone.",
-                ],
-            ),
-            (
-                "Where data is kept and who receives it",
-                [
-                    "Data is stored on our own servers, run by our team, in Romania (EU). For fast and secure delivery of the website and the app (DNS, content delivery network, protection against attacks) we work with <b>Cloudflare</b>: traffic passes encrypted through Cloudflare's network, but account data and family content are stored only on our servers. Processors: Cloudflare (delivery and protection), Google (sign-in, AI, translation, notifications) and Apple (sign-in, age check, notifications). Where these partners process data outside the EU, transfers rely on the safeguards provided by the GDPR (the EU–US Data Privacy Framework or standard contractual clauses). We disclose data to authorities only when the law requires it.",
+                    "All data is stored in the <b>EU only</b>. Processors, each under a data processing agreement: <b>Cloudflare</b> (hosting and storage), <b>Google</b> (sign-in, Android notifications, encrypted backups, status page), <b>Apple</b> (sign-in, age check, iOS notifications), <b>Twilio</b> (SMS and email codes). When Apple, Google or Twilio process data outside the EU for sign-in or notifications, the transfer relies on the EU–US Data Privacy Framework or standard contractual clauses.",
                     "We don't sell data, show ads or build profiles.",
                 ],
             ),
             (
                 "How long we keep data",
                 [
-                    "Account data is kept while the account exists. A parent can delete all family data at any time in the app (account 👤 → “Delete all family data”): messages, children's profiles and sessions are deleted immediately. Backups are deleted within 90 days."
+                    "Encrypted messages: as long as the chat exists on at least one phone. Chat metadata (who, when, size): until both sides delete the chat. Security logs: 90 days.",
+                    "Deleting an account or a child happens immediately, in the app. A child can't delete their own account; a parent does. When the last parent deletes their account, every child in the family is deleted too. Encrypted backups rotate after 30 days. The record of parental consent is kept for the life of the account plus 5 years.",
                 ],
             ),
             (
                 "Legal basis and children",
                 [
-                    "We process data to provide the service you ask for (contract, Art. 6(1)(b) GDPR) and for security (legitimate interest, Art. 6(1)(f)). Children's data is processed with the consent and under the control of a parent or legal guardian (Art. 8 GDPR)."
+                    "We process data to provide the service (contract, Art. 6(1)(b) GDPR), for security (legitimate interest, Art. 6(1)(f)) and to prove parental consent (legal obligation, Art. 6(1)(c) and Art. 7). Children's data is processed on the basis of their parent's or legal guardian's consent (Art. 8 GDPR)."
                 ],
             ),
             (
                 "Your rights",
                 [
-                    'You have the right of access, rectification, erasure, restriction, portability and objection. Write to <a href="mailto:hello@zapakid.ro">hello@zapakid.ro</a>. You can complain to the Romanian data protection authority (ANSPDCP, <a href="https://www.dataprotection.ro">dataprotection.ro</a>) or the authority in your country.'
+                    'You have the right of access, rectification, erasure, restriction, portability and objection, for yourself and your children. Write to <a href="mailto:privacy@zapakid.ro">privacy@zapakid.ro</a>; we reply within one month. You can complain to Romania\'s data protection authority, ANSPDCP (<a href="https://www.dataprotection.ro">dataprotection.ro</a>), or to the authority in your EU country.'
                 ],
             ),
             (
