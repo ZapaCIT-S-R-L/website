@@ -50,3 +50,34 @@ for (const path of ["/", "/en/", "/de/contact", "/privacy", "/application", "/ap
     assert.equal(await res.text(), path);
   });
 }
+
+// Footer version: pages carry __VERSION__ / __VERSION_URL__ placeholders, the Worker fills them from env.
+const page = '<footer><a href="__VERSION_URL__">__VERSION__</a></footer>';
+const htmlEnv = (vars) => ({
+  ...vars,
+  ASSETS: { fetch: async () => new Response(page, { headers: { "content-type": "text/html; charset=utf-8" } }) },
+});
+
+test("the footer shows the deployed version and links to its changes", async () => {
+  const url = "https://github.com/ZapaCIT-S-R-L/website/compare/v1.0.4...v1.0.5";
+  const res = await worker.fetch(
+    new Request("https://www.zapakid.ro/"),
+    htmlEnv({ VERSION: "v1.0.5", VERSION_URL: url }),
+  );
+  assert.equal(await res.text(), `<footer><a href="${url}">v1.0.5</a></footer>`);
+});
+
+test("without a deployed version the footer says dev and links to the repo", async () => {
+  const res = await worker.fetch(new Request("https://www.zapakid.ro/"), htmlEnv({}));
+  assert.equal(await res.text(), '<footer><a href="https://github.com/ZapaCIT-S-R-L/website">dev</a></footer>');
+});
+
+test("non-HTML responses are passed through untouched", async () => {
+  const css = "a::after { content: '__VERSION__'; }";
+  const env = {
+    VERSION: "v9.9.9",
+    ASSETS: { fetch: async () => new Response(css, { headers: { "content-type": "text/css" } }) },
+  };
+  const res = await worker.fetch(new Request("https://www.zapakid.ro/site.css"), env);
+  assert.equal(await res.text(), css);
+});

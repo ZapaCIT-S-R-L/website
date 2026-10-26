@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 APP_STORE = ""  # e.g. https://apps.apple.com/app/id...
 GOOGLE_PLAY = ""  # e.g. https://play.google.com/store/apps/details?id=...
-EMAIL = "contact@zapakid.ro"
+EMAIL = "hello@zapakid.ro"
 PHONE = {"ro": "0770 972 972", "de": "+40 770 972 972", "en": "+40 770 972 972"}
 LANGS = {"ro": "/", "de": "/de/", "en": "/en/"}
 
@@ -80,7 +80,7 @@ T = {
             (
                 "Cine suntem",
                 [
-                    'ZapaKid este un produs al <b>Zapacit S.R.L.</b>, Str. Zambilei nr. 76, Ghimbav 507075, județul Brașov, România, J2020002568087, CUI RO43395664 („noi”), operator al datelor personale descrise aici, conform Regulamentului (UE) 2016/679 (GDPR). Contact: <a href="mailto:contact@zapakid.ro">contact@zapakid.ro</a>.'
+                    'ZapaKid este un produs al <b>Zapacit S.R.L.</b>, Str. Zambilei nr. 76, Ghimbav 507075, județul Brașov, România, J2020002568087, CUI RO43395664 („noi”), operator al datelor personale descrise aici, conform Regulamentului (UE) 2016/679 (GDPR). Contact: <a href="mailto:hello@zapakid.ro">hello@zapakid.ro</a>.'
                 ],
             ),
             (
@@ -134,7 +134,7 @@ T = {
             (
                 "Drepturile tale",
                 [
-                    'Ai dreptul de acces, rectificare, ștergere, restricționare, portabilitate și opoziție. Scrie-ne la <a href="mailto:contact@zapakid.ro">contact@zapakid.ro</a>. Poți depune plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP, <a href="https://www.dataprotection.ro">dataprotection.ro</a>).'
+                    'Ai dreptul de acces, rectificare, ștergere, restricționare, portabilitate și opoziție. Scrie-ne la <a href="mailto:hello@zapakid.ro">hello@zapakid.ro</a>. Poți depune plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP, <a href="https://www.dataprotection.ro">dataprotection.ro</a>).'
                 ],
             ),
             (
@@ -209,7 +209,7 @@ T = {
             (
                 "Wer wir sind",
                 [
-                    'ZapaKid ist ein Produkt der <b>Zapacit S.R.L.</b>, Str. Zambilei nr. 76, 507075 Ghimbav, Kreis Brașov, Rumänien, J2020002568087, USt-IdNr. RO43395664 („wir“), Verantwortlicher für die hier beschriebenen personenbezogenen Daten gemäß Verordnung (EU) 2016/679 (DSGVO). Kontakt: <a href="mailto:contact@zapakid.ro">contact@zapakid.ro</a>.'
+                    'ZapaKid ist ein Produkt der <b>Zapacit S.R.L.</b>, Str. Zambilei nr. 76, 507075 Ghimbav, Kreis Brașov, Rumänien, J2020002568087, USt-IdNr. RO43395664 („wir“), Verantwortlicher für die hier beschriebenen personenbezogenen Daten gemäß Verordnung (EU) 2016/679 (DSGVO). Kontakt: <a href="mailto:hello@zapakid.ro">hello@zapakid.ro</a>.'
                 ],
             ),
             (
@@ -263,7 +263,7 @@ T = {
             (
                 "Deine Rechte",
                 [
-                    'Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch. Schreib uns an <a href="mailto:contact@zapakid.ro">contact@zapakid.ro</a>. Du kannst dich bei der rumänischen Datenschutzbehörde (ANSPDCP, <a href="https://www.dataprotection.ro">dataprotection.ro</a>) oder der Aufsichtsbehörde deines Landes beschweren.'
+                    'Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch. Schreib uns an <a href="mailto:hello@zapakid.ro">hello@zapakid.ro</a>. Du kannst dich bei der rumänischen Datenschutzbehörde (ANSPDCP, <a href="https://www.dataprotection.ro">dataprotection.ro</a>) oder der Aufsichtsbehörde deines Landes beschweren.'
                 ],
             ),
             (
@@ -335,7 +335,7 @@ T = {
             (
                 "Who we are",
                 [
-                    'ZapaKid is a product of <b>Zapacit S.R.L.</b>, Str. Zambilei nr. 76, Ghimbav 507075, Brașov County, Romania, J2020002568087, VAT RO43395664 (“we”), the controller of the personal data described here under Regulation (EU) 2016/679 (GDPR). Contact: <a href="mailto:contact@zapakid.ro">contact@zapakid.ro</a>.'
+                    'ZapaKid is a product of <b>Zapacit S.R.L.</b>, Str. Zambilei nr. 76, Ghimbav 507075, Brașov County, Romania, J2020002568087, VAT RO43395664 (“we”), the controller of the personal data described here under Regulation (EU) 2016/679 (GDPR). Contact: <a href="mailto:hello@zapakid.ro">hello@zapakid.ro</a>.'
                 ],
             ),
             (
@@ -389,7 +389,7 @@ T = {
             (
                 "Your rights",
                 [
-                    'You have the right of access, rectification, erasure, restriction, portability and objection. Write to <a href="mailto:contact@zapakid.ro">contact@zapakid.ro</a>. You can complain to the Romanian data protection authority (ANSPDCP, <a href="https://www.dataprotection.ro">dataprotection.ro</a>) or the authority in your country.'
+                    'You have the right of access, rectification, erasure, restriction, portability and objection. Write to <a href="mailto:hello@zapakid.ro">hello@zapakid.ro</a>. You can complain to the Romanian data protection authority (ANSPDCP, <a href="https://www.dataprotection.ro">dataprotection.ro</a>) or the authority in your country.'
                 ],
             ),
             (
@@ -439,7 +439,7 @@ def page(lang, name, title, desc, body):
 </header>
 {body}
 <footer>
-<a href="{base}">ZapaKid</a><a href="{base}contact">{t["nav_contact"]}</a><a href="{base}privacy">{t["nav_privacy"]}</a><a href="mailto:{EMAIL}">{EMAIL}</a>
+<span class="brand"><a href="{base}">ZapaKid</a> @ <a class="version" href="__VERSION_URL__">__VERSION__</a></span><a href="{base}contact">{t["nav_contact"]}</a><a href="{base}privacy">{t["nav_privacy"]}</a><a href="mailto:{EMAIL}">{EMAIL}</a>
 <span class="copy">© 2026 <a href="https://www.zapacit.com">Zapacit S.R.L.</a></span>
 </footer>
 </div>

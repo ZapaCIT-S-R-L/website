@@ -1,7 +1,9 @@
 // zapakid.ro site Worker: every request comes here first (run_worker_first), then the static pages.
 // zapakid.ro redirects to www; URLs of the archived portal redirect to the landing pages.
 // Every response gets the security headers below (HSTS comes from the Cloudflare zone).
+// HTML pages get the deployed version in the footer: deploy.yml passes VERSION and VERSION_URL.
 const SITE = "https://www.zapakid.ro";
+const REPO = "https://github.com/ZapaCIT-S-R-L/website";
 
 // The pages have no scripts, no inline styles and only same-origin images and CSS, so nothing else is allowed.
 const SECURITY_HEADERS = {
@@ -30,9 +32,20 @@ function route(request, env) {
   return env.ASSETS.fetch(request);
 }
 
+// Fills the footer placeholders in HTML pages; everything else passes through as is.
+async function withVersion(res, env) {
+  if (!(res.headers.get("content-type") ?? "").startsWith("text/html")) return res;
+  const html = (await res.text())
+    .replaceAll("__VERSION_URL__", env.VERSION_URL || REPO)
+    .replaceAll("__VERSION__", env.VERSION || "dev");
+  const out = new Response(html, res);
+  out.headers.delete("etag"); // the asset's ETag no longer matches the body
+  return out;
+}
+
 export default {
   async fetch(request, env) {
-    const res = await route(request, env);
+    const res = await withVersion(await route(request, env), env);
     // Redirect and asset responses have immutable headers: copy into a new response.
     const out = new Response(res.body, res);
     for (const [name, value] of Object.entries(SECURITY_HEADERS)) out.headers.set(name, value);
