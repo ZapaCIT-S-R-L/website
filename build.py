@@ -75,7 +75,7 @@ T = {
             (
                 "Cine suntem",
                 [
-                    'ZapaKid este un produs al <b>Zapacit S.R.L.</b>, Str. Zambilei nr. 76, Ghimbav 507075, județul Brașov, România, J2020002568087, CUI RO43395664 („noi”), operator al datelor personale descrise aici, conform Regulamentului (UE) 2016/679 (GDPR). Contact pentru datele personale: <a href="mailto:privacy@zapakid.ro">privacy@zapakid.ro</a>.'
+                    'ZapaKid este un produs al <b>Zapacit S.R.L.</b>, Str. Zambilei nr. 76, Ghimbav 507075, județul Brașov, România, J2020002568087, CUI RO43395664 („noi”), operator al datelor personale descrise aici, conform Regulamentului (UE) 2016/679 (RGPD sau, în engleză, RGPD). Contact pentru datele personale: <a href="mailto:privacy@zapakid.ro">privacy@zapakid.ro</a>.'
                 ],
             ),
             (
@@ -117,7 +117,7 @@ T = {
             (
                 "Temeiul legal și copiii",
                 [
-                    "Prelucrăm datele pentru a furniza serviciul (executarea contractului, art. 6(1)(b) GDPR), pentru securitate (interes legitim, art. 6(1)(f)) și pentru a dovedi acordul părintelui (obligație legală, art. 6(1)(c) și art. 7). Datele copiilor sunt prelucrate pe baza acordului părintelui sau tutorelui legal (art. 8 GDPR)."
+                    "Prelucrăm datele pentru a furniza serviciul (executarea contractului, art. 6(1)(b) RGPD), pentru securitate (interes legitim, art. 6(1)(f)) și pentru a dovedi acordul părintelui (obligație legală, art. 6(1)(c) și art. 7). Datele copiilor sunt prelucrate pe baza acordului părintelui sau tutorelui legal (art. 8 RGPD)."
                 ],
             ),
             (
