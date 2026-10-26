@@ -6,7 +6,7 @@ No PHP, cookies, forms or third-party requests.
 - Edit texts in `build.py`, run `python3 build.py`, commit the generated `.html` with it.
 - At launch set `APP_STORE` / `GOOGLE_PLAY` in `build.py`: the "Soon" buttons become store links.
 - Hosted on Cloudflare: Worker `zapakid-site` (`wrangler.jsonc`, `src/index.js`) serves the pages and redirects
-  zapakid.ro / app.zapakid.ro to www and the archived portal URLs to the landing pages.
+  zapakid.ro to www and the archived portal URLs to the landing pages.
 - Unit tests: `npm test` (the Worker's redirects, `test/worker.test.js`).
 - End-to-end tests: `npx wrangler dev --local-upstream www.zapakid.ro` in one terminal, then
   `BASE_URL=http://127.0.0.1:8787 npm run test:e2e` (`test/e2e/site.test.js`). Against the live site:

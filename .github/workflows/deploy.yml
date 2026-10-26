@@ -1,4 +1,4 @@
-# Deploys the site Worker (www.zapakid.ro, zapakid.ro, app.zapakid.ro) to Cloudflare when a PR is merged to main,
+# Deploys the site Worker (www.zapakid.ro, zapakid.ro) to Cloudflare when a PR is merged to main,
 # then runs the end-to-end tests against the live site and rolls back to the previous version if they fail.
 # Credentials live only in the `production` environment of this repo (Settings → Environments):
 #   secret:   CLOUDFLARE_API_TOKEN (Workers scripts + routes, zapakid.ro zone only)

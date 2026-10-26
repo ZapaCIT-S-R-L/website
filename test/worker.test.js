@@ -10,7 +10,7 @@ const get = (url) => worker.fetch(new Request(url), env);
 
 const redirects = [
   ["https://zapakid.ro/en/privacy?x=1", "https://www.zapakid.ro/en/privacy?x=1", "apex keeps path and query"],
-  ["https://app.zapakid.ro/anything", "https://www.zapakid.ro/", "app host goes to the landing page"],
+  ["https://zapakid.ro/", "https://www.zapakid.ro/", "apex root"],
   ["https://www.zapakid.ro/app/kid", "https://www.zapakid.ro/", "archived /app portal"],
   ["https://www.zapakid.ro/api/v1/health", "https://www.zapakid.ro/", "archived /api"],
   ["https://www.zapakid.ro/db", "https://www.zapakid.ro/", "archived /db"],
