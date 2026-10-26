@@ -11,8 +11,8 @@ const pages = ["/", "/contact", "/privacy", "/en/", "/en/contact", "/en/privacy"
 function targets(html) {
   const found = new Set();
   for (const [, url] of html.matchAll(/\s(?:href|src)="([^"]+)"/g)) {
-    if (url.startsWith(SITE)) found.add(url.slice(SITE.length) || "/");
-    else if (url.startsWith("/") && !url.startsWith("//")) found.add(url);
+    const parsed = new URL(url, SITE); // compare origins: "https://www.zapakid.ro.evil.com" is not same-site
+    if (parsed.origin === SITE) found.add(parsed.pathname + parsed.search);
   }
   return found;
 }
