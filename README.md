@@ -9,6 +9,8 @@ No PHP, cookies, forms or third-party requests.
   zapakid.ro to www and the archived portal URLs to the landing pages.
 - Lint: `npm run lint` (Prettier, ESLint, Ruff; `npm run format` fixes formatting). Editors pick up `.editorconfig`.
 - Unit tests: `npm test` (the Worker's redirects, `test/worker.test.js`; translation parity, `test/test_build.py`).
+- Accessibility: `npx playwright install chromium` once, then `BASE_URL=http://127.0.0.1:8787 npm run test:a11y`
+  (axe-core, WCAG 2.2 AA, desktop and phone width).
 - End-to-end tests: `npx wrangler dev --local-upstream www.zapakid.ro` in one terminal, then
   `BASE_URL=http://127.0.0.1:8787 npm run test:e2e` (`test/e2e/site.test.js`). Against the live site:
   `BASE_URL=https://www.zapakid.ro LIVE=1 npm run test:e2e`.

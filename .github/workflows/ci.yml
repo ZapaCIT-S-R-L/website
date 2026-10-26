@@ -3,6 +3,7 @@
 #   pages    translation parity (test/test_build.py) and the committed .html match build.py
 #   build    wrangler bundles the Worker and its assets (dry run, nothing uploaded)
 #   e2e      the full site over HTTP on a local wrangler dev server: pages, headers, links (npm run test:e2e)
+#            and accessibility with axe-core in headless Chromium (npm run test:a11y)
 #   secrets  gitleaks scan of the whole history
 #   lint     html-validate (pages), Prettier (spaces, formatting), ESLint (JS), Ruff (Python), actionlint (workflows)
 name: ci
@@ -63,6 +64,15 @@ jobs:
           done
           cat "$RUNNER_TEMP/wrangler.log"; exit 1
       - run: npm run test:e2e
+        env:
+          BASE_URL: http://127.0.0.1:8787
+      # Only the headless shell: the runner image already has its system libraries (--with-deps ran apt for minutes).
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+      - run: npx playwright install --only-shell chromium
+      - run: npm run test:a11y
         env:
           BASE_URL: http://127.0.0.1:8787
       - if: failure()
