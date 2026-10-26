@@ -112,7 +112,12 @@ jobs:
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: .nvmrc
+      # Staff come from CODEOWNERS on the base branch, not from the pull request.
+      - run: git fetch --depth=1 origin "$BASE_REF" && git show "FETCH_HEAD:.github/CODEOWNERS" > "$RUNNER_TEMP/CODEOWNERS"
+        env:
+          BASE_REF: ${{ github.event.pull_request.base.ref }}
       - run: node scripts/cla-check.js
         env:
           PR_AUTHOR: ${{ github.event.pull_request.user.login }}
           PR_ASSOCIATION: ${{ github.event.pull_request.author_association }}
+          CODEOWNERS_FILE: ${{ runner.temp }}/CODEOWNERS

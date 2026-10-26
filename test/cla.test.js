@@ -33,3 +33,16 @@ for (const [login, association, expected, why] of cases) {
 test("a username mentioned outside the table doesn't count", () => {
   assert.equal(hasSigned("mallory", "NONE", signatures + "\nThanks @mallory for the review.\n"), false);
 });
+
+// GitHub reports org members with private membership as CONTRIBUTOR, so staff come from CODEOWNERS on main.
+const codeowners = "# Every change needs approval from a code owner.\n* @stefan-zpc\n/docs/ @Some-Maintainer\n";
+
+test("a code owner on main is staff, whatever GitHub reports", () => {
+  assert.equal(hasSigned("stefan-zpc", "CONTRIBUTOR", signatures, codeowners), true);
+  assert.equal(hasSigned("some-maintainer", "NONE", signatures, codeowners), true);
+});
+
+test("a username in a CODEOWNERS comment is not staff", () => {
+  assert.equal(hasSigned("every", "NONE", signatures, codeowners), false);
+  assert.equal(hasSigned("mallory", "NONE", signatures, "# @mallory\n* @stefan-zpc\n"), false);
+});
