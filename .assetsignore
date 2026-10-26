@@ -17,3 +17,5 @@ SECURITY.md
 CONTRIBUTING.md
 .github
 test
+dist
+wrangler.log

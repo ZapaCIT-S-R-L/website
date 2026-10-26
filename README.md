@@ -7,14 +7,18 @@ No PHP, cookies, forms or third-party requests.
 - At launch set `APP_STORE` / `GOOGLE_PLAY` in `build.py`: the "Soon" buttons become store links.
 - Hosted on Cloudflare: Worker `zapakid-site` (`wrangler.jsonc`, `src/index.js`) serves the pages and redirects
   zapakid.ro / app.zapakid.ro to www and the archived portal URLs to the landing pages.
-- Tests: `npm test` (the Worker's redirects, `test/worker.test.js`).
+- Unit tests: `npm test` (the Worker's redirects, `test/worker.test.js`).
+- End-to-end tests: `npx wrangler dev --local-upstream www.zapakid.ro` in one terminal, then
+  `BASE_URL=http://127.0.0.1:8787 npm run test:e2e` (`test/e2e/site.test.js`). Against the live site:
+  `BASE_URL=https://www.zapakid.ro LIVE=1 npm run test:e2e`.
 
 ## How changes ship
 
-1. Open a pull request. CI (`.github/workflows/ci.yml`) runs the tests, checks the pages match `build.py`
-   and scans the whole history for credentials.
+1. Open a pull request. CI (`.github/workflows/ci.yml`) runs the unit tests, checks the pages match `build.py`,
+   builds the Worker (dry run), runs the end-to-end tests on a local server and scans the whole history for credentials.
 2. A maintainer reviews and merges it.
-3. The merge to `main` deploys to Cloudflare (`.github/workflows/deploy.yml`, environment `production`).
+3. The merge to `main` deploys to Cloudflare (`.github/workflows/deploy.yml`, environment `production`), runs the
+   end-to-end tests against www.zapakid.ro and rolls back to the previous version if they fail.
    Never deploy from a laptop.
 
 ## License
