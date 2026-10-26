@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy policy — ZapaKid</title>
-<meta name="description" content="ZapaKid: an AI tutor that talks with your child in English, German or Romanian, homework from a photo, tests, games unlocked with coins earned by learning, and an encrypted family chat. Coming soon to the App Store and Google Play.">
+<meta name="description" content="ZapaKid: end-to-end encrypted chat between parents and kids — messages, photos and voice messages. Parents add their kids with a QR code. Data in the EU only, no ads. Coming soon to the App Store and Google Play.">
 <meta name="theme-color" content="#0b0f0c">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -14,7 +14,7 @@
 <link rel="alternate" hreflang="de" href="https://www.zapakid.ro/de/privacy">
 <link rel="alternate" hreflang="en" href="https://www.zapakid.ro/en/privacy">
 <meta property="og:title" content="Privacy policy — ZapaKid">
-<meta property="og:description" content="ZapaKid: an AI tutor that talks with your child in English, German or Romanian, homework from a photo, tests, games unlocked with coins earned by learning, and an encrypted family chat. Coming soon to the App Store and Google Play.">
+<meta property="og:description" content="ZapaKid: end-to-end encrypted chat between parents and kids — messages, photos and voice messages. Parents add their kids with a QR code. Data in the EU only, no ads. Coming soon to the App Store and Google Play.">
 <meta property="og:image" content="https://www.zapakid.ro/img/robot.jpg">
 </head>
 <body>
@@ -25,32 +25,30 @@
 </header>
 <main class="page">
 <h1>Privacy policy</h1>
-<p class="updated">Last updated: 19 October 2026</p>
+<p class="updated">Last updated: 26 October 2026</p>
 <h2>1. Who we are</h2>
-<p>ZapaKid is a product of <b>Zapacit S.R.L.</b>, Str. Zambilei nr. 76, Ghimbav 507075, Brașov County, Romania, J2020002568087, VAT RO43395664 (“we”), the controller of the personal data described here under Regulation (EU) 2016/679 (GDPR). Contact: <a href="mailto:hello@zapakid.ro">hello@zapakid.ro</a>.</p>
+<p>ZapaKid is a product of <b>Zapacit S.R.L.</b>, Str. Zambilei nr. 76, Ghimbav 507075, Brașov County, Romania, J2020002568087, VAT RO43395664 (“we”), the controller of the personal data described here under Regulation (EU) 2016/679 (GDPR). Privacy contact: <a href="mailto:privacy@zapakid.ro">privacy@zapakid.ro</a>.</p>
 <h2>2. The zapakid.ro website</h2>
-<p>The website is only a presentation page. It has no accounts, forms, cookies or analytics and loads nothing from third parties. For security, the web server temporarily logs the IP address, time and page requested.</p>
-<h2>3. Your account in the app: Apple or Google only</h2>
-<p>A parent account is created only with <b>Sign in with Apple</b> or <b>Sign in with Google</b>. We have no passwords. Apple/Google give us a unique account identifier and, on first sign-in, your name and email address (Apple may give a relay address).</p>
-<p>Age check: the app only asks the phone to confirm that the parent is at least 18; we never receive a date of birth. If the age can't be confirmed, no account is created.</p>
-<p>Children don't create accounts: a child's phone works only after a parent scans its QR code and sets up the child's profile (first name, age, grade, languages).</p>
-<h2>4. Family chats and notes</h2>
-<p>Messages, attachments and notes are <b>end-to-end encrypted</b> on the phone (AES-256-GCM; the keys stay on the family's devices). Our servers store only encrypted data and cannot read it.</p>
-<p>Translation happens on the phone when the system supports it. For languages the phone can't translate (for example Romanian), the message text is sent encrypted (HTTPS) through our server to Google for translation; we don't store it.</p>
-<p>For notifications we use Apple (APNs) and Google services, which needs a notification identifier for the phone.</p>
-<h2>5. AI features (tutor, voice, photos, tests)</h2>
-<p>Your child's questions, photos they send (homework, Rubik's cube, timetable) and texts read aloud are sent through our server to <b>Google Cloud (Vertex AI, Gemini)</b> as our processor. We don't send names, email or other identifying data, and we don't store this content on our servers. Under Google Cloud's terms, Google doesn't use this data to train its models.</p>
-<p>The tutor conversation history stays on the phone.</p>
-<h2>6. Where data is kept and who receives it</h2>
-<p>Data is stored on our own servers, run by our team, in Romania (EU). For fast and secure delivery of the website and the app (DNS, content delivery network, protection against attacks) we work with <b>Cloudflare</b>: traffic passes encrypted through Cloudflare's network, but account data and family content are stored only on our servers. Processors: Cloudflare (delivery and protection), Google (sign-in, AI, translation, notifications) and Apple (sign-in, age check, notifications). Where these partners process data outside the EU, transfers rely on the safeguards provided by the GDPR (the EU–US Data Privacy Framework or standard contractual clauses). We disclose data to authorities only when the law requires it.</p>
+<p>This site is a presentation page only. It has no accounts, forms, cookies or analytics and loads nothing from other sites. Cloudflare, which hosts the site, briefly logs the IP address, date and page requested, for security.</p>
+<h2>3. Accounts: parents only, Apple or Google only</h2>
+<p>A parent account is created only with <b>Sign in with Apple</b> or <b>Sign in with Google</b>. We have no passwords. Apple/Google give us a unique account identifier and your email address.</p>
+<p>Age check: the app asks the phone (Apple Declared Age Range, Google Play Age Signals) only to confirm the parent is at least 18; we never receive a date of birth. If the phone reports a minor, no account is created.</p>
+<p>Kids don't create their own accounts: a child's phone only works after a parent scans the QR code, accepts the Parental Agreement and sets up the child's profile (nickname, age range, avatar).</p>
+<p>If you lose access, you recover your account with Apple/Google, an email code or an SMS code (sent through <b>Twilio</b>).</p>
+<h2>4. Your family&#x27;s chats</h2>
+<p>Messages, photos and voice messages are <b>end-to-end encrypted</b> on the phone. The keys stay on your family's phones and in the phone's encrypted keychain (iCloud Keychain, Android). Our servers store only encrypted data and <b>cannot read, listen to or recover it</b>, even if an authority asks.</p>
+<p>For notifications we use Apple (APNs) and Google (FCM). Notifications only say who wrote, never what.</p>
+<h2>5. Where data is stored and who receives it</h2>
+<p>All data is stored in the <b>EU only</b>. Processors, each under a data processing agreement: <b>Cloudflare</b> (hosting and storage), <b>Google</b> (sign-in, Android notifications, encrypted backups, status page), <b>Apple</b> (sign-in, age check, iOS notifications), <b>Twilio</b> (SMS and email codes). When Apple, Google or Twilio process data outside the EU for sign-in or notifications, the transfer relies on the EU–US Data Privacy Framework or standard contractual clauses.</p>
 <p>We don't sell data, show ads or build profiles.</p>
-<h2>7. How long we keep data</h2>
-<p>Account data is kept while the account exists. A parent can delete all family data at any time in the app (account 👤 → “Delete all family data”): messages, children's profiles and sessions are deleted immediately. Backups are deleted within 90 days.</p>
-<h2>8. Legal basis and children</h2>
-<p>We process data to provide the service you ask for (contract, Art. 6(1)(b) GDPR) and for security (legitimate interest, Art. 6(1)(f)). Children's data is processed with the consent and under the control of a parent or legal guardian (Art. 8 GDPR).</p>
-<h2>9. Your rights</h2>
-<p>You have the right of access, rectification, erasure, restriction, portability and objection. Write to <a href="mailto:hello@zapakid.ro">hello@zapakid.ro</a>. You can complain to the Romanian data protection authority (ANSPDCP, <a href="https://www.dataprotection.ro">dataprotection.ro</a>) or the authority in your country.</p>
-<h2>10. Changes</h2>
+<h2>6. How long we keep data</h2>
+<p>Encrypted messages: as long as the chat exists on at least one phone. Chat metadata (who, when, size): until both sides delete the chat. Security logs: 90 days.</p>
+<p>Deleting an account or a child happens immediately, in the app. A child can't delete their own account; a parent does. When the last parent deletes their account, every child in the family is deleted too. Encrypted backups rotate after 30 days. The record of parental consent is kept for the life of the account plus 5 years.</p>
+<h2>7. Legal basis and children</h2>
+<p>We process data to provide the service (contract, Art. 6(1)(b) GDPR), for security (legitimate interest, Art. 6(1)(f)) and to prove parental consent (legal obligation, Art. 6(1)(c) and Art. 7). Children's data is processed on the basis of their parent's or legal guardian's consent (Art. 8 GDPR).</p>
+<h2>8. Your rights</h2>
+<p>You have the right of access, rectification, erasure, restriction, portability and objection, for yourself and your children. Write to <a href="mailto:privacy@zapakid.ro">privacy@zapakid.ro</a>; we reply within one month. You can complain to Romania's data protection authority, ANSPDCP (<a href="https://www.dataprotection.ro">dataprotection.ro</a>), or to the authority in your EU country.</p>
+<h2>9. Changes</h2>
 <p>When we change this policy we update the date above; important changes are also announced in the app.</p>
 </main>
 <footer>
