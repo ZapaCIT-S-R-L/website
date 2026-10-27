@@ -85,7 +85,7 @@ test("plain HTTP is upgraded to HTTPS", { skip: !LIVE && "live only" }, async ()
   assert.match(res.headers.get("location"), /^https:\/\/www\.zapakid\.ro\//);
 });
 
-const REPO = "https://github.com/ZapaCIT-S-R-L/website";
+const REPO = "https://github.com/ZapaCIT-S-R-L/zapakid-website";
 for (const [path, home] of [
   ["/", "/"],
   ["/en/contact", "/en/"],

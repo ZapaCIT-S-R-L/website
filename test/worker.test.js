@@ -59,7 +59,7 @@ const htmlEnv = (vars) => ({
 });
 
 test("the footer shows the deployed version and links to its changes", async () => {
-  const url = "https://github.com/ZapaCIT-S-R-L/website/compare/v1.0.4...v1.0.5";
+  const url = "https://github.com/ZapaCIT-S-R-L/zapakid-website/compare/v1.0.4...v1.0.5";
   const res = await worker.fetch(
     new Request("https://www.zapakid.ro/"),
     htmlEnv({ VERSION: "v1.0.5", VERSION_URL: url }),
@@ -69,7 +69,7 @@ test("the footer shows the deployed version and links to its changes", async () 
 
 test("without a deployed version the footer says dev and links to the repo", async () => {
   const res = await worker.fetch(new Request("https://www.zapakid.ro/"), htmlEnv({}));
-  assert.equal(await res.text(), '<footer><a href="https://github.com/ZapaCIT-S-R-L/website">dev</a></footer>');
+  assert.equal(await res.text(), '<footer><a href="https://github.com/ZapaCIT-S-R-L/zapakid-website">dev</a></footer>');
 });
 
 test("non-HTML responses are passed through untouched", async () => {
