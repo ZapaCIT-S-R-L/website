@@ -21,7 +21,7 @@
   "workers_dev": false,
 
   // Footer version, overridden on every deploy by deploy.yml (wrangler deploy --var).
-  "vars": { "VERSION": "dev", "VERSION_URL": "https://github.com/ZapaCIT-S-R-L/website" },
+  "vars": { "VERSION": "dev", "VERSION_URL": "https://github.com/ZapaCIT-S-R-L/zapakid-website" },
 
   "observability": { "enabled": true },
 }
