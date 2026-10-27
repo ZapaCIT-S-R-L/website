@@ -3,7 +3,7 @@
 // Every response gets the security headers below (HSTS comes from the Cloudflare zone).
 // HTML pages get the deployed version in the footer: deploy.yml passes VERSION and VERSION_URL.
 const SITE = "https://www.zapakid.ro";
-const REPO = "https://github.com/ZapaCIT-S-R-L/website";
+const REPO = "https://github.com/ZapaCIT-S-R-L/zapakid-website";
 
 // The pages have no scripts, no inline styles and only same-origin images and CSS, so nothing else is allowed.
 const SECURITY_HEADERS = {
